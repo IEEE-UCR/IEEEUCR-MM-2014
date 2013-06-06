@@ -1,0 +1,8 @@
+The encoder control algorithms are not the most difficult thing ever.  Let me explain how they are done through some links.
+
+Wikipedia:
+http://en.wikipedia.org/wiki/Rotary_encoder#Incremental_rotary_encoder
+
+... WELL, THAT'S YOUR JOB.
+
+And basically, the ISR's presented by the microcontroller will call some of these functions depending on which one goes high and which one goes low.
