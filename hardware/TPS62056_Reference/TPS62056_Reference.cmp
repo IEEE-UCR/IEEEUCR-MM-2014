@@ -1,0 +1,31 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 7/14/2013 4:07:21 PM
+
+BeginCmp
+TimeStamp = /51E31F90;
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E32CDE;
+Reference = J1;
+ValeurCmp = CONN_6;
+IdModule  = SIL-6;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E32405;
+Reference = L1;
+ValeurCmp = 10uH;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E25A22;
+Reference = U1;
+ValeurCmp = TPS6205X;
+IdModule  = MSOP10-0.5;
+EndCmp
+
+EndListe
