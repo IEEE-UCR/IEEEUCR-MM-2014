@@ -1,24 +1,115 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 7/14/2013 4:07:21 PM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 7/23/2013 1:56:00 AM
 
 BeginCmp
 TimeStamp = /51E31F90;
 Reference = C1;
-ValeurCmp = 10uF;
+ValeurCmp = 22uF;
 IdModule  = SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /51E32CDE;
+TimeStamp = /51E3301B;
+Reference = C2;
+ValeurCmp = 22uF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E6F3B6;
+Reference = C3;
+ValeurCmp = 22uF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /51EE3CFB;
+Reference = C4;
+ValeurCmp = 22uF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E34F3D;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E33527;
 Reference = J1;
-ValeurCmp = CONN_6;
-IdModule  = SIL-6;
+ValeurCmp = GS2;
+IdModule  = SparkFun-SJ_2S;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E6F548;
+Reference = J2;
+ValeurCmp = GS2;
+IdModule  = SparkFun-SJ_2S;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E32405;
 Reference = L1;
 ValeurCmp = 10uH;
-IdModule  = ;
+IdModule  = Bourns_SRR7032;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E6F3B0;
+Reference = L2;
+ValeurCmp = 82nH;
+IdModule  = Bourns_PM1008;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E33199;
+Reference = P1;
+ValeurCmp = CONN_5;
+IdModule  = SparkFun-1X05;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E33412;
+Reference = R1;
+ValeurCmp = 4.7M, 5%;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E34620;
+Reference = R2;
+ValeurCmp = 510K;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E34626;
+Reference = R3;
+ValeurCmp = 110K;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E34F4A;
+Reference = R4;
+ValeurCmp = 330;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /51EDEB95;
+Reference = S1;
+ValeurCmp = TAC_SWITCHSMD;
+IdModule  = Alps_TACT_SKHM_Series;
+EndCmp
+
+BeginCmp
+TimeStamp = /51EDEB7B;
+Reference = S2;
+ValeurCmp = TAC_SWITCHSMD;
+IdModule  = Alps_TACT_SKHM_Series;
 EndCmp
 
 BeginCmp

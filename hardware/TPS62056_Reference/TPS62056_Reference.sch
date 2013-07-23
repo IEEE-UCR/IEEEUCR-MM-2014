@@ -30,6 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:tps6205x
+LIBS:SparkFun
 LIBS:TPS62056_Reference-cache
 EELAYER 27 0
 EELAYER END
@@ -37,7 +38,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "TPS6205x-based Fixed Voltage Switching Regulator Module"
-Date "17 jul 2013"
+Date "23 jul 2013"
 Rev "A"
 Comp "UCR Micromouse"
 Comment1 ""
@@ -204,28 +205,6 @@ F 3 "" H 3700 5100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_PUSH SW1
-U 1 1 51E33616
-P 3200 5400
-F 0 "SW1" H 3350 5510 50  0000 C CNN
-F 1 "SW_ON" H 3200 5320 50  0000 C CNN
-F 2 "~" H 3200 5400 60  0000 C CNN
-F 3 "~" H 3200 5400 60  0000 C CNN
-	1    3200 5400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L SW_PUSH SW2
-U 1 1 51E33623
-P 3200 6000
-F 0 "SW2" H 3350 6110 50  0000 C CNN
-F 1 "SW_OFF" H 3200 5920 50  0000 C CNN
-F 2 "~" H 3200 6000 60  0000 C CNN
-F 3 "~" H 3200 6000 60  0000 C CNN
-	1    3200 6000
-	0    -1   -1   0   
-$EndComp
-$Comp
 L GND #PWR06
 U 1 1 51E3365B
 P 3200 6300
@@ -321,6 +300,113 @@ Text Notes 3750 3950 2    60   ~ 0
 Low-battery trip at 6.82v.\n(3.41v per cell in a 2s Li-Po)\n\nTo disable, do not populate\nR2 and short R3.
 Text Notes 4850 6700 0    60   ~ 0
 3-pin regulator\npinout
+$Comp
+L LED D1
+U 1 1 51E34F3D
+P 7550 4000
+F 0 "D1" H 7550 4100 50  0000 C CNN
+F 1 "LED" H 7550 3900 50  0000 C CNN
+F 2 "~" H 7550 4000 60  0000 C CNN
+F 3 "~" H 7550 4000 60  0000 C CNN
+	1    7550 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L R R4
+U 1 1 51E34F4A
+P 7550 3500
+F 0 "R4" V 7630 3500 40  0000 C CNN
+F 1 "330" V 7557 3501 40  0000 C CNN
+F 2 "~" V 7480 3500 30  0000 C CNN
+F 3 "~" H 7550 3500 30  0000 C CNN
+	1    7550 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 51E34F59
+P 7550 4250
+F 0 "#PWR012" H 7550 4250 30  0001 C CNN
+F 1 "GND" H 7550 4180 30  0001 C CNN
+F 2 "" H 7550 4250 60  0000 C CNN
+F 3 "" H 7550 4250 60  0000 C CNN
+	1    7550 4250
+	1    0    0    -1  
+$EndComp
+Text Notes 4050 6100 0    60   ~ 0
+See datasheet for\npushbutton\nresistor value\ncalculation.
+$Comp
+L INDUCTOR L2
+U 1 1 51E6F3B0
+P 8300 3200
+F 0 "L2" V 8250 3200 40  0000 C CNN
+F 1 "82nH" V 8400 3200 40  0000 C CNN
+F 2 "~" H 8300 3200 60  0000 C CNN
+F 3 "~" H 8300 3200 60  0000 C CNN
+	1    8300 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C3
+U 1 1 51E6F3B6
+P 8700 3400
+F 0 "C3" H 8700 3500 40  0000 L CNN
+F 1 "22uF" H 8706 3315 40  0000 L CNN
+F 2 "~" H 8738 3250 30  0000 C CNN
+F 3 "~" H 8700 3400 60  0000 C CNN
+	1    8700 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 51E6F3BC
+P 8700 3700
+F 0 "#PWR013" H 8700 3700 30  0001 C CNN
+F 1 "GND" H 8700 3630 30  0001 C CNN
+F 2 "" H 8700 3700 60  0000 C CNN
+F 3 "" H 8700 3700 60  0000 C CNN
+	1    8700 3700
+	1    0    0    -1  
+$EndComp
+Text Label 9750 3200 0    60   ~ 0
+VOUT
+$Comp
+L GS2 J2
+U 1 1 51E6F548
+P 8700 2850
+F 0 "J2" H 8800 3000 50  0000 C CNN
+F 1 "GS2" H 8800 2701 40  0000 C CNN
+F 2 "" H 8700 2850 60  0000 C CNN
+F 3 "" H 8700 2850 60  0000 C CNN
+	1    8700 2850
+	0    -1   -1   0   
+$EndComp
+Text Notes 7950 3900 0    60   ~ 0
+Optional additional output filtering\n~85 KHz = 10% switching frequency\n
+Text Notes 8200 2650 0    60   ~ 0
+Short to bypass filter
+$Comp
+L TAC_SWITCHSMD S2
+U 1 1 51EDEB7B
+P 3150 6000
+F 0 "S2" H 3050 6250 50  0000 L BNN
+F 1 "TAC_SWITCHSMD" H 2800 5750 50  0000 L BNN
+F 2 "SparkFun-TACTILE_SWITCH_SMD" H 3350 5700 50  0001 C CNN
+F 3 "" H 3150 6000 60  0000 C CNN
+	1    3150 6000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TAC_SWITCHSMD S1
+U 1 1 51EDEB95
+P 3150 5400
+F 0 "S1" H 3050 5650 50  0000 L BNN
+F 1 "TAC_SWITCHSMD" H 2950 5150 50  0000 L BNN
+F 2 "SparkFun-TACTILE_SWITCH_SMD" H 3350 5100 50  0001 C CNN
+F 3 "" H 3150 5400 60  0000 C CNN
+	1    3150 5400
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
 	6200 3200 6350 3200
 Wire Wire Line
@@ -359,7 +445,7 @@ Connection ~ 3700 5700
 Wire Wire Line
 	3700 5500 3700 5800
 Wire Notes Line
-	2900 6400 4000 6400
+	2800 6400 4000 6400
 Wire Notes Line
 	4000 6400 4000 5750
 Wire Notes Line
@@ -367,9 +453,9 @@ Wire Notes Line
 Wire Notes Line
 	3450 5750 3450 4850
 Wire Notes Line
-	3450 4850 2900 4850
+	3450 4850 2800 4850
 Wire Notes Line
-	2900 4850 2900 6400
+	2800 4850 2800 6400
 Connection ~ 3300 3200
 Wire Wire Line
 	7250 3600 7250 3700
@@ -403,39 +489,6 @@ Wire Wire Line
 Wire Wire Line
 	7050 3400 7050 3200
 Connection ~ 7050 3200
-$Comp
-L LED D1
-U 1 1 51E34F3D
-P 7550 4000
-F 0 "D1" H 7550 4100 50  0000 C CNN
-F 1 "LED" H 7550 3900 50  0000 C CNN
-F 2 "~" H 7550 4000 60  0000 C CNN
-F 3 "~" H 7550 4000 60  0000 C CNN
-	1    7550 4000
-	0    1    1    0   
-$EndComp
-$Comp
-L R R?
-U 1 1 51E34F4A
-P 7550 3500
-F 0 "R?" V 7630 3500 40  0000 C CNN
-F 1 "330" V 7557 3501 40  0000 C CNN
-F 2 "~" V 7480 3500 30  0000 C CNN
-F 3 "~" H 7550 3500 30  0000 C CNN
-	1    7550 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 51E34F59
-P 7550 4250
-F 0 "#PWR?" H 7550 4250 30  0001 C CNN
-F 1 "GND" H 7550 4180 30  0001 C CNN
-F 2 "" H 7550 4250 60  0000 C CNN
-F 3 "" H 7550 4250 60  0000 C CNN
-	1    7550 4250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7550 4250 7550 4200
 Wire Wire Line
@@ -443,80 +496,70 @@ Wire Wire Line
 Wire Wire Line
 	7550 3250 7550 3200
 Connection ~ 7550 3200
-Connection ~ 3200 5700
-Text Notes 4050 6100 0    60   ~ 0
-See datasheet for\npushbutton\nresistor value\ncalculation.
-$Comp
-L INDUCTOR L?
-U 1 1 51E6F3B0
-P 8300 3200
-F 0 "L?" V 8250 3200 40  0000 C CNN
-F 1 "160nH" V 8400 3200 40  0000 C CNN
-F 2 "~" H 8300 3200 60  0000 C CNN
-F 3 "~" H 8300 3200 60  0000 C CNN
-	1    8300 3200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L C C?
-U 1 1 51E6F3B6
-P 8700 3400
-F 0 "C?" H 8700 3500 40  0000 L CNN
-F 1 "22uF" H 8706 3315 40  0000 L CNN
-F 2 "~" H 8738 3250 30  0000 C CNN
-F 3 "~" H 8700 3400 60  0000 C CNN
-	1    8700 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 51E6F3BC
-P 8700 3700
-F 0 "#PWR?" H 8700 3700 30  0001 C CNN
-F 1 "GND" H 8700 3630 30  0001 C CNN
-F 2 "" H 8700 3700 60  0000 C CNN
-F 3 "" H 8700 3700 60  0000 C CNN
-	1    8700 3700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	8600 3200 9500 3200
+	8600 3200 10000 3200
 Wire Wire Line
 	8700 3600 8700 3700
 Connection ~ 8700 3200
-Text Label 9300 3200 0    60   ~ 0
-VOUT
-$Comp
-L GS2 J?
-U 1 1 51E6F548
-P 8450 2850
-F 0 "J?" H 8550 3000 50  0000 C CNN
-F 1 "GS2" H 8550 2701 40  0000 C CNN
-F 2 "" H 8450 2850 60  0000 C CNN
-F 3 "" H 8450 2850 60  0000 C CNN
-	1    8450 2850
-	0    -1   -1   0   
-$EndComp
 Wire Notes Line
-	7950 3050 8950 3050
+	7950 3050 9350 3050
 Wire Notes Line
-	8950 3050 8950 3800
+	9350 3050 9350 3800
 Wire Notes Line
-	8950 3800 7950 3800
+	9350 3800 7950 3800
 Wire Notes Line
 	7950 3800 7950 3050
 Wire Wire Line
-	8250 2850 7800 2850
+	8500 2850 7800 2850
 Wire Wire Line
 	7800 2850 7800 3200
 Connection ~ 7800 3200
 Wire Wire Line
-	8650 2850 9100 2850
+	8900 2850 9500 2850
+Connection ~ 9500 3200
 Wire Wire Line
-	9100 2850 9100 3200
-Connection ~ 9100 3200
-Text Notes 7950 3900 0    60   ~ 0
-Optional additional output filtering\n~85 KHz = 10% switching frequency\n
-Text Notes 8000 2650 0    60   ~ 0
-Short to bypass filter
+	3150 5200 3250 5200
+Wire Wire Line
+	3200 5200 3200 5100
+Connection ~ 3200 5200
+Wire Wire Line
+	3150 5600 3250 5600
+Wire Wire Line
+	3200 5600 3200 5800
+Wire Wire Line
+	3150 5800 3250 5800
+Connection ~ 3200 5600
+Connection ~ 3200 5800
+Connection ~ 3200 5700
+Wire Wire Line
+	3150 6200 3250 6200
+Wire Wire Line
+	3200 6200 3200 6300
+Connection ~ 3200 6200
+Wire Wire Line
+	9500 2850 9500 3200
+$Comp
+L C C4
+U 1 1 51EE3CFB
+P 9000 3400
+F 0 "C4" H 9000 3500 40  0000 L CNN
+F 1 "22uF" H 9006 3315 40  0000 L CNN
+F 2 "~" H 9038 3250 30  0000 C CNN
+F 3 "~" H 9000 3400 60  0000 C CNN
+	1    9000 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR014
+U 1 1 51EE3D01
+P 9000 3700
+F 0 "#PWR014" H 9000 3700 30  0001 C CNN
+F 1 "GND" H 9000 3630 30  0001 C CNN
+F 2 "" H 9000 3700 60  0000 C CNN
+F 3 "" H 9000 3700 60  0000 C CNN
+	1    9000 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3600 9000 3700
 $EndSCHEMATC

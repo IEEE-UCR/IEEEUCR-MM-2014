@@ -1,10 +1,5 @@
 ----[ Notes ]----
 
-Mouser PN#'s:
-input cap: 810-C3225Y5V1C226Z-9
-output cap: 810-C1608X5R0J226M
-Pushbutton pull-down: 667-ERJ-6GEYJ475V
-Main Inductor: 652-SRR7032-100M
 
 Ripple at 8.4v to 3.3v w/ 10uH inductor
 0.24A
