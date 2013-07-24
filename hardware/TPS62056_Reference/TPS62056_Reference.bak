@@ -562,4 +562,5 @@ F 3 "" H 9000 3700 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	9000 3600 9000 3700
+Connection ~ 9000 3200
 $EndSCHEMATC

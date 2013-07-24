@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 7/23/2013 1:56:00 AM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 7/23/2013 2:03:10 PM
 
 BeginCmp
 TimeStamp = /51E31F90;
@@ -39,14 +39,14 @@ BeginCmp
 TimeStamp = /51E33527;
 Reference = J1;
 ValeurCmp = GS2;
-IdModule  = SparkFun-SJ_2S;
+IdModule  = SparkFun-SJ_2S-NO;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E6F548;
 Reference = J2;
 ValeurCmp = GS2;
-IdModule  = SparkFun-SJ_2S;
+IdModule  = SparkFun-SJ_2S-NO;
 EndCmp
 
 BeginCmp
@@ -95,6 +95,13 @@ BeginCmp
 TimeStamp = /51E34F4A;
 Reference = R4;
 ValeurCmp = 330;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /51EE4D9A;
+Reference = R5;
+ValeurCmp = 510K;
 IdModule  = SM0603_Resistor;
 EndCmp
 
