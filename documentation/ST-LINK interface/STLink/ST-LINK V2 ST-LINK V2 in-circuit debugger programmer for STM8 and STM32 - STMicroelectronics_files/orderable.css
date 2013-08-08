@@ -1,0 +1,414 @@
+#orderable table.tablesorter, .stickyHeader {
+	font-family:arial;
+	/*background-color: #F9F9F9;*/
+	margin:10px 0pt 60px;
+	font-size: 8pt;
+	width: 1200px;
+	text-align: left;
+	border-collapse: collapse;
+    border-spacing: 0;
+    text-indent: 0;
+}
+.stickyHeader {
+	margin-top: 0;
+}
+
+#orderable table.tablesorter thead tr th, #orderable table.tablesorter tfoot tr th, #orderable table.table {
+	font-size: 8pt;
+	padding: 4px;
+	border-left: 2px solid #f1f1f1;
+}
+#orderable table thead tr {
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-color: #39a9dc;
+	color: white;
+	/*border-top: 2px solid #39a9dc;
+	border-left: 2px solid #39a9dc;
+	border-right: 2px solid white;*/
+}
+#orderable table.tablesorter thead tr .header {
+	/*background-image: url(http://www.st.com/web/en/images/layout/or_bg.gif);*/
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+	background-color: #39a9dc;
+	color: white;
+	/*border-top: 2px solid #39a9dc;
+	border-left: 2px solid #39a9dc;
+	border-right: 2px solid #39a9dc;*/
+}
+#orderable table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: white;
+	vertical-align: top;
+	border-left: 2px solid #f1f1f1;
+	border-right: 2px solid #f1f1f1;
+	border-bottom: 2px solid #f1f1f1;
+	
+}
+#orderable table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+#orderable table.tablesorter tbody tr:hover td{
+	background-color:#EEFAFF;
+	
+}
+#orderable table.tablesorter thead tr .headerSortUp {
+	background-image: url(http://www.st.com/web/en/images/layout/or_asc.gif);
+	background-color: #39A9DC;
+	color: white;
+	/*border-top: 2px solid #39a9dc;
+	border-left: 2px solid #f9f9f9;
+	border-right: 2px solid #f9f9f9;*/
+}
+#orderable table.tablesorter thead tr .headerSortDown {
+	background-image: url(http://www.st.com/web/en/images/layout/or_desc.gif);
+	/*background-color: #ffffff;
+	color: #39a9dc;*/
+	background-color: #39A9DC;
+	color: white;
+	
+	/*border-top: 2px solid #39a9dc;
+	border-left: 2px solid #f1f9f9;
+	border-right: 2px solid #f9f9f9;*/
+}
+#orderable table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+	/*background-color: #8dbdd8;*/
+}
+
+
+#orderable .or-param {
+	width: 56px;
+}
+#orderable .or-status {
+	width: 85px
+}
+#orderable .or-packing {
+	width: 60px;
+}
+
+#orderable .or-order {
+	width: 90px;
+}
+
+#orderable .orderable-distributor {
+}
+
+#orderable .orderable-distributor th {
+	background-color: #f1f1f1;
+	padding:2px;
+}
+
+
+/* Buttons */
+#orderable .buttons {
+	display: block;
+    font-weight: bold;
+    padding: 4px 3px;
+    text-align: center;
+    width: 70px;
+}
+
+#orderable .od-Active {
+	/* background-color: #74A829;
+	color: white; */
+	color: black;
+}
+
+#orderable .od-Evaluation {
+	/*background-color: #FD8315;
+	color: white;*/
+	color: black;
+}
+
+
+#orderable .od-Preview {
+	/*background-color: #3B929F;
+	color: white;*/
+	color: black;
+}
+
+#orderable .od-Target {
+	/*background-color: #4345A5;
+	color: white;*/
+	color: black;
+}
+
+#orderable .od-Proposal {
+	/*background-color: #6B3184;
+	color: white;*/
+	color: black;
+}
+
+#orderable .od-NRND {
+	/*background-color: #CE4040;
+	color: white;*/
+	color: black;
+}
+
+
+/*
+
+#orderable .od-ordernow {
+	padding: 0;
+}
+#orderable .od-ordernow a{
+	background-color: #8DB94C;
+	color: white;
+	text-decoration: none;
+	color: white;
+	padding: 4px 3px;
+}
+
+#orderable .od-ordernow a:hover{
+	background-color: white;
+	color: #39a9dc;
+}
+
+#orderable .od-freesamples {
+	padding: 0;
+}
+#orderable .od-freesamples a{
+	background-color: #eb8355;
+	color: white;
+	text-decoration: none;
+	color: white;
+	padding: 3px;
+	display:block;
+	width: 76px;
+}
+
+#orderable .od-freesamples a:hover{
+	background-color: white;
+	color: #002052;
+}
+
+#orderable .od-download {
+        padding: 0;
+}
+#orderable .od-download a{
+        background-color: #002052;
+        color: white;
+        text-decoration: none;
+        color: white;
+        padding: 3px;
+        display:block;
+        width: 76px;
+}
+
+#orderable .od-download a:hover{
+        background-color: white;
+        color: #002052;
+}
+
+
+#orderable .od-downloadr {
+        padding: 0;
+}
+#orderable .od-downloadr a{
+        background-color: #5c0915;
+        color: white;
+        text-decoration: none;
+        color: white;
+        padding: 3px;
+        display:block;
+        width: 76px;
+}
+
+#orderable .od-downloadr a:hover{
+        background-color: white;
+        color: #002052;
+}
+
+
+#orderable .od-buynow {
+	padding: 0;
+}
+#orderable .od-buynow a{
+	background-color: #c5007b;
+	color: white;
+	text-decoration: none;
+	color: white;
+	padding: 3px;
+	display:block;
+	width: 76px;
+}
+
+#orderable .od-buynow a:hover{
+	background-color: white;
+	color: #c5007b;
+}
+
+
+*/
+#orderable a.or-pdf, #orderable a.or-xml{
+	display: block;
+	text-align: center;
+	width: 50px;
+	height: 16px;
+	text-decoration: none;
+	background-color: #f1f1f1;
+	text-indent: -9999px;
+}
+
+#orderable a.or-pdf {
+	background: url('http://www.st.com/web/en/images/od_pdf-icon.png') center center no-repeat;
+}
+
+#orderable a.or-xml {
+	background: url('http://www.st.com/web/en/images/od_xml-icon.png') center center no-repeat;
+}
+
+#orderable a.or-pdf:hover, #orderable a.or-xml:hover {
+	color: #39a9dc;
+	background-color: white;
+}
+
+
+
+
+/* updated classes */
+#orderable .od-ordernow {
+	padding: 0;
+}
+#orderable .od-ordernow a{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #aad767), color-stop(1, #8DB94C) );
+	background: -moz-linear-gradient(center top , #aad767 5%, #8DB94C 100%) repeat scroll 0 0 #8DB94C;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#aad767', endColorstr='#8DB94C');
+    border: 1px solid #8DB94C;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 0 0 #8DB94C;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 5px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #8DB94C;
+	width: 60px;
+}
+
+#orderable .od-ordernow a:hover{
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8DB94C), color-stop(1, #aad767) );
+		background:-moz-linear-gradient( center top, #8DB94C 5%, #aad767 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8DB94C', endColorstr='#aad767');
+		background-color:#8DB94C;
+		text-decoration: underline;
+}
+
+
+#orderable .od-freesamples {
+	padding: 0;
+}
+#orderable .od-freesamples a{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffac7c), color-stop(1, #eb8355) );
+	background: -moz-linear-gradient(center top , #ffac7c 5%, #eb8355 100%) repeat scroll 0 0 #eb8355;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffac7c', endColorstr='#eb8355');
+    border: 1px solid #eb8355;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 0 0 #eb8355;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 5px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #eb8355;
+	width: 78px;
+}
+
+#orderable .od-freesamples a:hover{
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eb8355), color-stop(1, #ffac7c) );
+		background:-moz-linear-gradient( center top, #eb8355 5%, #ffac7c 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb8355', endColorstr='#ffac7c');
+		background-color:#eb8355;
+		text-decoration: underline;
+}
+
+
+#orderable .od-downloadr {
+	padding: 0;
+}
+#orderable .od-downloadr a{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #974343), color-stop(1, #5C0915) );
+	background: -moz-linear-gradient(center top , #974343 5%, #5C0915 100%) repeat scroll 0 0 #5C0915;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#974343', endColorstr='#5C0915');
+    border: 1px solid #5C0915;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 0 0 #5C0915;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 5px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #5C0915;
+	width: 70px;
+}
+
+#orderable .od-downloadr a:hover{
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5C0915), color-stop(1, #974343) );
+		background:-moz-linear-gradient( center top, #5C0915 5%, #974343 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5C0915', endColorstr='#974343');
+		background-color:#5C0915;
+		text-decoration: underline;
+}
+
+
+#orderable .od-buynow {
+	padding: 0;
+}
+#orderable .od-buynow a{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #FFC477), color-stop(1, #FB9E25) );
+	background: -moz-linear-gradient(center top , #FFC477 5%, #FB9E25 100%) repeat scroll 0 0 #FFC477;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#FB9E25');
+    border: 1px solid #EEB44F;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 0 0 #FCE2C1;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 5px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #CC9F52;
+	width: 60px;
+}
+
+#orderable .od-buynow a:hover{
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
+		background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
+		background-color:#fb9e25;
+		text-decoration: underline;
+}
+
+/* end updated classes */
+
+
+#or-tooltip {
+    background-color: #DDDDDD;
+    color: black;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: normal;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    max-width: 300px;
+}
+
+.or-distriname {
+	width: 70px;	
+}
+
+#orderable a{
+	color: #39A9DC;	
+}

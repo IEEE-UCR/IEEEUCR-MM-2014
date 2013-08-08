@@ -1,0 +1,115 @@
+/* CSS Document */
+
+
+#calculators {
+	margin: 0 10px;	
+}
+
+#calculators p {
+	margin: 0;	
+	padding: 3px;
+}	
+
+#calculators input { 
+	font-size:12px;
+	/* color:#999999; */
+}
+
+#calculators td { 
+	vertical-align:middle;
+}
+
+#calculators .input_border_1px {
+	border: 1px solid #cccccc; 
+	width: auto;
+	color: #333333;
+	padding: 2px;
+}
+
+#calculators .input_ratio {
+	width: auto;
+}
+
+#calculators .button_form_calculate {
+	border: none;
+	background: url(http://www.st.com/web/en/jsp/common_images/calculate.gif) no-repeat left top;
+	cursor:pointer;
+	width: 93px;
+	height: 19px;
+}
+
+#calculators .button_form_clear {
+	border: none;
+	background: url(http://www.st.com/web/en/jsp/common_images/clearform.gif) no-repeat left top;
+	cursor:pointer;
+	width: 93px;
+	height: 19px;
+}
+
+#calculators .bluetitle { 
+	background-color:#028AC8; 
+	color:#FFFFFF; 
+	padding:3px; 
+	font-weight:bold;  
+}
+
+#calculators .asterisk { color:#FF0000; font-weight:bold }
+
+#calculators .calculated { color:#003399; font-weight:bold } 
+
+#calculators .button_background { background-color:#f5f5f5 } 
+
+.container10 {
+	width:692px;
+}
+
+.container12 {
+	width:auto;
+	min-height:280px;
+	float:left
+}
+
+#container11 {
+	width:688px;
+	height: 100%;
+	overflow: auto;
+	background-color:#ffffff;
+	border-left:2px solid #c6c7c9;
+	border-right:2px solid #c6c7c9
+}
+
+#mycustomscroll_app_l1_1box1_noscroll {
+	border-width:0;
+	background-color:#DDD;
+	min-height:450px;
+	padding:0;
+	position:relative;
+	width:670px;
+	text-align:left;
+	font-size:11px;
+}
+
+#mycustomscroll_app_l1_1box1_noscroll p {
+	font-size:11px;
+}
+
+#mycustomscroll_app_l1_1box1_noscroll ul {
+	font-size:11px;
+	list-style:disc;
+	margin-left: 23px;
+}
+
+/* Table included dynamically */
+
+#calculators .calc_odd_table_rows { background-color:#ddeeff; text-align:center }
+
+#calculators .calc_even_table_rows { background-color:#f5f5f5; text-align:center }
+
+#calculators .calc_table_header { background-color:#333333; text-align:center; color:#ffffff; padding:3px; }
+
+#calculators .calc_image_border { border:1px solid #333333; padding:3px; margin:10px; background-color:#ffffff; }
+
+#calculators .calc_image_bkg { background-color:#dddddd; }
+
+#calculators_show { padding: 10px 30px 0 30px }
+
