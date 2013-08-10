@@ -1,6 +1,0 @@
-Voltage Regulator
-=================
-
-The voltage regulation circuit is designed to be portable across different KiCAD builds of micromouse.
-
-This folder contains our reference board and some PDF's.  We may have some waveforms available for it too.
