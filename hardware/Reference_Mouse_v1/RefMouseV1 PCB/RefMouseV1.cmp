@@ -1,0 +1,73 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/25/2013 8:00:24 PM
+
+BeginCmp
+TimeStamp = /521A8DE2/51E31F90;
+Reference = C1;
+ValeurCmp = 22uF;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/51E3301B;
+Reference = C2;
+ValeurCmp = 22uF;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/51E34F3D;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/521ABBD8;
+Reference = JP1;
+ValeurCmp = M03PTH;
+IdModule  = SparkFun-1X03;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/51E32405;
+Reference = L1;
+ValeurCmp = 10uH;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/521AAB8A;
+Reference = M1;
+ValeurCmp = BATTBALANCE-2S;
+IdModule  = B3B-XH-A;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/51E34F4A;
+Reference = R4;
+ValeurCmp = 330;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/521A8FC9;
+Reference = S1;
+ValeurCmp = SWITCH-SPSTPTH;
+IdModule  = SparkFun-SWITCH-SPDT;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/51E25A22;
+Reference = U1;
+ValeurCmp = TPS6205X;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8AA1;
+Reference = U2;
+ValeurCmp = STM32F103RX;
+IdModule  = TQFP_64;
+EndCmp
+
+EndListe
