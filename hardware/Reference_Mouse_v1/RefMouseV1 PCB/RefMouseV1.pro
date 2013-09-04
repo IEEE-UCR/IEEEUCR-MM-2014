@@ -1,6 +1,6 @@
-update=8/25/2013 9:37:42 PM
+update=8/30/2013 2:02:54 AM
 version=1
-last_client=kicad
+last_client=cvpcb
 [eeschema]
 version=1
 LibDir=libraries
@@ -81,11 +81,16 @@ LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
 LibName17=JST-XH
+LibName18=Alps_TACT_SKLM_Series
+LibName19=Bourns_PM1008
+LibName20=Bourns_SRR7032
+LibName21=miniSOIC-10
+LibName22=SparkFun
 LibDir=libraries
+[general]
+version=1
 [cvpcb]
 version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[general]
-version=1
