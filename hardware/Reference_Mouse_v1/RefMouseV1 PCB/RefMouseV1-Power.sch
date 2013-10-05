@@ -1,34 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
 LIBS:stm32f103rx
 LIBS:SparkFun
 LIBS:tps6205x
@@ -40,7 +10,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 2 2
 Title "TPS6205x-based Fixed Voltage Switching Regulator Module"
-Date "30 aug 2013"
+Date "22 sep 2013"
 Rev "A"
 Comp "UCR Micromouse"
 Comment1 ""

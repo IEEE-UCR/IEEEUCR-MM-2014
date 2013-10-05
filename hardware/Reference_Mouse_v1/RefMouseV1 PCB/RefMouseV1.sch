@@ -1,34 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
 LIBS:stm32f103rx
 LIBS:SparkFun
 LIBS:tps6205x
@@ -40,7 +10,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 2
 Title ""
-Date "30 aug 2013"
+Date "22 sep 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -71,16 +41,14 @@ $EndSheet
 $Comp
 L GND #PWR01
 U 1 1 521ABF7B
-P 4850 1800
-F 0 "#PWR01" H 4850 1800 30  0001 C CNN
-F 1 "GND" H 4850 1730 30  0001 C CNN
-F 2 "" H 4850 1800 60  0000 C CNN
-F 3 "" H 4850 1800 60  0000 C CNN
-	1    4850 1800
-	-1   0    0    1   
+P 4550 2100
+F 0 "#PWR01" H 4550 2100 30  0001 C CNN
+F 1 "GND" H 4550 2030 30  0001 C CNN
+F 2 "" H 4550 2100 60  0000 C CNN
+F 3 "" H 4550 2100 60  0000 C CNN
+	1    4550 2100
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4850 1800 4850 2000
 $Comp
 L TEST-POINT3X5 TP1
 U 1 1 52206320
@@ -105,4 +73,10 @@ F 3 "" H 2400 3150 60  0000 C CNN
 $EndComp
 Text Notes 2100 3400 0    60   ~ 0
 XTAL test point /\nExt. clock override
+Wire Wire Line
+	4550 2000 4550 1850
+Wire Wire Line
+	4550 1850 4850 1850
+Wire Wire Line
+	4850 1850 4850 2000
 $EndSCHEMATC
