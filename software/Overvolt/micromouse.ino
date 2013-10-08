@@ -55,10 +55,6 @@ void setup() {
   delay(1000); // put a delay here so that the mouse won't go springing off immediately after turning on
 #if TELEMETRY
   Serial1.begin(9600);
-//  Serial1.println("AT");
-//  Serial1.println("AT+NAME=Overvolt");
-//  Serial1.println("AT+BAUD=115200,0,0");
-//  Serial1.begin(115200);
 #endif
 }
 mCtrl faulhaber(forwardSpeed, FORWARD, 7, 8, 9, 10, bMillisDelay, 5.00, 15);

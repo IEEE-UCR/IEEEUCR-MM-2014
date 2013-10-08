@@ -122,6 +122,12 @@ void mCtrl::straightLine(const uint32_t & lSensorRead, const uint32_t & rSensorR
   unsigned long ePassedMillis = millis();
   static int iMouseError = 0;
 
+ /*
+  * Let me talk about what debug mode and what it does...
+  * Debug mode prints out the PID function in...
+  * R: <right sensor value>L: <left sensor value> <Sensor usage message>E: <mouse error>
+  **/
+
 #if DEBUGMODE
   Serial1.print("R: ");
   Serial1.print(rSensorRead);
@@ -131,19 +137,21 @@ void mCtrl::straightLine(const uint32_t & lSensorRead, const uint32_t & rSensorR
 
   // Here come the conditions in which the sensors can reach
   // In this condition, we ignore everything because the sensors are out of range.
-  if (lSensorRead > 150 && rSensorRead > 150) {
+  bool lSensorInRange = lSensorRead <= lSensorPIDIgnore;
+  bool rSensorInRange = rSensorRead <= rSensorPIDIgnore;
+  if (!lSensorInRange && !rSensorInRange) {
     iMouseError = 0;
 #if DEBUGMODE
     Serial1.print(" IGRONING ALL SENSORS.");
 #endif
   // In this condition, we assume that the left wall is missing.
-  } else if (lSensorRead > 150 && rSensorRead <= 150) {
+  } else if (!lSensorInRange && rSensorInRange) {
     iMouseError = -(rSensorRead - this->rightSensorCalibrate );
 #if DEBUGMODE
     Serial1.print(" Ignoring left sensor.");
 #endif
   // In this condition, we assume that the right wall is missing.
-  } else if (rSensorRead > 150 && lSensorRead <= 150) {
+  } else if (!rSensorInRange && lSensorInRange) {
     iMouseError = (lSensorRead - this->leftSensorCalibrate );
 #if DEBUGMODE
     Serial1.print(" Ignoring right sensor.");
@@ -196,6 +204,8 @@ void mCtrl::straightLine(const uint32_t & lSensorRead, const uint32_t & rSensorR
 
 /*
  * With the friction stop program, we set all motors to zero and hope that they slow down... they might not.
+ *
+ * Beware that this function is deprecated and will be removed fairly soon.
  *
  **/
 void mCtrl::frictionStop() {

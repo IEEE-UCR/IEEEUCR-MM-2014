@@ -2,6 +2,7 @@
 #include "Arduino.h"
 
 encodr::encodr(const uint32_t wall, const uint32_t hafwall, const uint32_t wallLimit) {
+                                               // set the mouse information into the encoder interface
   this->wallLength = wall;
   this->halfWall = hafwall;
   this->wallLim = wallLimit;
@@ -10,16 +11,17 @@ encodr::encodr(const uint32_t wall, const uint32_t hafwall, const uint32_t wallL
   
 }
 
-void encodr::lMotorInc() {
+void encodr::lMotorInc() {                     // increment left motor
   this->lMotorEnc++;
 }
 
-void encodr::rMotorInc() {
+void encodr::rMotorInc() {                     // increment right motor
   this->rMotorEnc++;
 }
 
 boolean encodr::cellMark() {
-  if (this->lMotorEnc >= wallLength && this->rMotorEnc >= wallLength ) {
+  if (this->lMotorEnc >= wallLength 
+    && this->rMotorEnc >= wallLength ) {       // mark if greater than or equal to wall length
     this->rMotorEnc = this->rMotorEnc - wallLength;
     this->lMotorEnc = this->lMotorEnc - wallLength;
     return 1;
@@ -29,7 +31,7 @@ boolean encodr::cellMark() {
 
 
 
-uint32_t encodr::forceMark() {
+uint32_t encodr::forceMark() {                 // forcibly marks a cell based (usually) on sensor readings
   boolean returnV = 0;
   int32_t lMotorDif = (rMotorEnc-wallLength);
   int32_t rMotorDif = (rMotorEnc-wallLength);
@@ -41,7 +43,7 @@ uint32_t encodr::forceMark() {
    return returnV;
 }
 
-boolean encodr::turnOk() {
+boolean encodr::turnOk() {                     // makes it okay to turn...
   if ( abs(rMotorEnc-halfWall) + abs(lMotorEnc-halfWall) < 20) {
     return 1;
   }
