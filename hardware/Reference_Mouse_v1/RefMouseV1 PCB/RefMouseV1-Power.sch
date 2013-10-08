@@ -1,16 +1,47 @@
 EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:stm32f103rx
 LIBS:SparkFun
 LIBS:tps6205x
 LIBS:JST-XH-BattBalance
+LIBS:drv8837
 LIBS:RefMouseV1-cache
 EELAYER 27 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 2 2
+Sheet 2 3
 Title "TPS6205x-based Fixed Voltage Switching Regulator Module"
-Date "22 sep 2013"
+Date "5 sep 2013"
 Rev "A"
 Comp "UCR Micromouse"
 Comment1 ""
@@ -198,11 +229,11 @@ F 3 "" H 950 1600 60  0000 C CNN
 	1    950  1600
 	1    0    0    -1  
 $EndComp
-Text HLabel 3200 3700 2    60   Input ~ 0
+Text HLabel 3200 3700 2    60   Output ~ 0
 VBATT_SW
-Text HLabel 6900 2100 2    60   Input ~ 0
+Text HLabel 6900 2100 2    60   Output ~ 0
 +3.3V
-Text HLabel 3300 1500 2    60   Input ~ 0
+Text HLabel 3300 1500 2    60   Output ~ 0
 VBATT
 Text Notes 3350 1650 0    60   ~ 0
 Always-on battery voltage
@@ -215,7 +246,7 @@ Polarized JST-XH\nLiPo balance connector
 Text Notes 650  1150 0    60   ~ 0
 0.1" header footprint for alternate\nconnectors, measurement, or charging.
 Text Notes 1800 4100 0    60   ~ 0
-Main power switch.\nEnables main regulators and\nmotor drivers. Does not need to\nbe rated for very much current.
+Main power switch.\nEnables main regulators and\nmotor drivers. Does not need to\nhandle much current.
 $Comp
 L TEST-POINT3X5 TP3
 U 1 1 52208851

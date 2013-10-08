@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/30/2013 3:26:29 AM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 9/5/2013 2:45:52 AM
 
 BeginCmp
 TimeStamp = /521A8DE2/51E31F90;
@@ -96,6 +96,20 @@ TimeStamp = /521A8AA1;
 Reference = U2;
 ValeurCmp = STM32F103RX;
 IdModule  = TQFP_64;
+EndCmp
+
+BeginCmp
+TimeStamp = /5227CDAA/5227D4B1;
+Reference = U3;
+ValeurCmp = DRV8837;
+IdModule  = S-PWSON-N8;
+EndCmp
+
+BeginCmp
+TimeStamp = /5227CDAA/5227D4BE;
+Reference = U4;
+ValeurCmp = DRV8837;
+IdModule  = S-PWSON-N8;
 EndCmp
 
 EndListe

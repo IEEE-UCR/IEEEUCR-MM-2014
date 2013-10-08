@@ -1,16 +1,47 @@
 EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:stm32f103rx
 LIBS:SparkFun
 LIBS:tps6205x
 LIBS:JST-XH-BattBalance
+LIBS:drv8837
 LIBS:RefMouseV1-cache
 EELAYER 27 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
-Date "22 sep 2013"
+Date "5 sep 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -32,23 +63,25 @@ $EndComp
 $Sheet
 S 750  700  600  500 
 U 521A8DE2
-F0 "RefMouseV1-Power" 50
+F0 "Power" 50
 F1 "RefMouseV1-Power.sch" 50
-F2 "VBATT_SW" I R 1350 950 60 
-F3 "+3.3V" I R 1350 1100 60 
-F4 "VBATT" I R 1350 800 60 
+F2 "VBATT" O R 1350 800 60 
+F3 "VBATT_SW" O R 1350 950 60 
+F4 "+3.3V" O R 1350 1100 60 
 $EndSheet
 $Comp
 L GND #PWR01
 U 1 1 521ABF7B
-P 4550 2100
-F 0 "#PWR01" H 4550 2100 30  0001 C CNN
-F 1 "GND" H 4550 2030 30  0001 C CNN
-F 2 "" H 4550 2100 60  0000 C CNN
-F 3 "" H 4550 2100 60  0000 C CNN
-	1    4550 2100
-	1    0    0    -1  
+P 4850 1800
+F 0 "#PWR01" H 4850 1800 30  0001 C CNN
+F 1 "GND" H 4850 1730 30  0001 C CNN
+F 2 "" H 4850 1800 60  0000 C CNN
+F 3 "" H 4850 1800 60  0000 C CNN
+	1    4850 1800
+	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	4850 1800 4850 2000
 $Comp
 L TEST-POINT3X5 TP1
 U 1 1 52206320
@@ -73,10 +106,16 @@ F 3 "" H 2400 3150 60  0000 C CNN
 $EndComp
 Text Notes 2100 3400 0    60   ~ 0
 XTAL test point /\nExt. clock override
-Wire Wire Line
-	4550 2000 4550 1850
-Wire Wire Line
-	4550 1850 4850 1850
-Wire Wire Line
-	4850 1850 4850 2000
+$Sheet
+S 8750 2950 650  950 
+U 5227CDAA
+F0 "Motor" 50
+F1 "RefMouseV1-Motor.sch" 50
+F2 "MOTOR_A1" I L 8750 3350 60 
+F3 "MOTOR_A2" I L 8750 3450 60 
+F4 "MOTOR_B1" I L 8750 3650 60 
+F5 "MOTOR_B2" I L 8750 3750 60 
+F6 "V_LOGIC" I L 8750 3150 60 
+F7 "V_MOTOR" I L 8750 3050 60 
+$EndSheet
 $EndSCHEMATC
