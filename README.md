@@ -12,3 +12,5 @@ Within the hardware folder, we will probably use KiCAD to plan out our PCB's.  K
 And through these methods, we will create better micromice.
 
 Documentation is also provided through the documentation folder.
+
+Brandon is awesome!!!!!!!
