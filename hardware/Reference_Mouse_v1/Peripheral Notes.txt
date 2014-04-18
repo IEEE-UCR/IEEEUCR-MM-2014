@@ -1,9 +1,0 @@
-[Timer assignments]
-TIM1 (Advanced control)
-	Motor PWM x 2
-
-TIMx (general purpose)
-	Quadrature decoder x 1
-
-TIMx (general purpose)
-	Quadrature decoder x 1
