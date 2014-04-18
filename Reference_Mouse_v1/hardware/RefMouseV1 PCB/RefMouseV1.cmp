@@ -1,0 +1,115 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 9/5/2013 2:45:52 AM
+
+BeginCmp
+TimeStamp = /521A8DE2/51E31F90;
+Reference = C1;
+ValeurCmp = 22uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/51E3301B;
+Reference = C2;
+ValeurCmp = 22uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/51E34F3D;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/521ABBD8;
+Reference = JP1;
+ValeurCmp = M03PTH;
+IdModule  = SparkFun-1X03;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/522088E4;
+Reference = JP2;
+ValeurCmp = M02PTH;
+IdModule  = SparkFun-1X02;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/51E32405;
+Reference = L1;
+ValeurCmp = 10uH;
+IdModule  = Bourns_SRR7032;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/521AAB8A;
+Reference = M1;
+ValeurCmp = BATTBALANCE-2S;
+IdModule  = B3B-XH-A;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/51E34F4A;
+Reference = R4;
+ValeurCmp = 330;
+IdModule  = SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/521A8FC9;
+Reference = S1;
+ValeurCmp = SWITCH-SPSTPTH;
+IdModule  = SparkFun-SWITCH-SPDT;
+EndCmp
+
+BeginCmp
+TimeStamp = /52206320;
+Reference = TP1;
+ValeurCmp = TEST-POINT3X5;
+IdModule  = SparkFun-PAD.03X.05;
+EndCmp
+
+BeginCmp
+TimeStamp = /52206458;
+Reference = TP2;
+ValeurCmp = TEST-POINT3X5;
+IdModule  = SparkFun-PAD.03X.05;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/52208851;
+Reference = TP3;
+ValeurCmp = TEST-POINT3X5;
+IdModule  = SparkFun-PAD.03X.05;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8DE2/51E25A22;
+Reference = U1;
+ValeurCmp = TPS6205X;
+IdModule  = MSOP10-0.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /521A8AA1;
+Reference = U2;
+ValeurCmp = STM32F103RX;
+IdModule  = TQFP_64;
+EndCmp
+
+BeginCmp
+TimeStamp = /5227CDAA/5227D4B1;
+Reference = U3;
+ValeurCmp = DRV8837;
+IdModule  = S-PWSON-N8;
+EndCmp
+
+BeginCmp
+TimeStamp = /5227CDAA/5227D4BE;
+Reference = U4;
+ValeurCmp = DRV8837;
+IdModule  = S-PWSON-N8;
+EndCmp
+
+EndListe
