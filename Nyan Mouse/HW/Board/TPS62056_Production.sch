@@ -35,7 +35,7 @@ LIBS:SparkFun
 LIBS:JST-XH-BattBalance
 LIBS:drv8837
 LIBS:3v3custom
-LIBS:altera_ep4ce15e22c*n
+LIBS:altera_ep4ce15e22c
 LIBS:Nyan Mouse-cache
 EELAYER 24 0
 EELAYER END
