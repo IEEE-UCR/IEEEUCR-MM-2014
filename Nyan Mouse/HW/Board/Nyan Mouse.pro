@@ -93,4 +93,4 @@ LibName33=libs/SparkFun
 LibName34=libs/JST-XH-BattBalance
 LibName35=libs/drv8837
 LibName36=libs/3v3custom
-LibName37=libs/altera_ep4ce15e22c*n
+LibName37=libs/altera_ep4ce15e22c
