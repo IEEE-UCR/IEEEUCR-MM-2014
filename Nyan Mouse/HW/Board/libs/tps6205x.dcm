@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0  Date: 7/14/2013 12:58:01 AM
+#
+$CMP TPS6205X
+D Texas Instruments TPS6205x series 800 mA Synchronous Step-Down Converter
+F libraries/tps62056.pdf
+$ENDCMP
+#
+#End Doc Library
