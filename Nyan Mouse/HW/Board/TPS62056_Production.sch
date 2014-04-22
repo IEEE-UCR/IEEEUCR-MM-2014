@@ -41,7 +41,7 @@ EELAYER 24 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 2 4
+Sheet 2 6
 Title "Nyan Mouse"
 Date "20 Apr 2014"
 Rev "Alpha"
