@@ -1,4 +1,4 @@
-update=Sun 20 Apr 2014 09:39:00 PM PDT
+update=Tue 22 Apr 2014 07:01:12 PM PDT
 version=1
 last_client=eeschema
 [cvpcb]
@@ -94,3 +94,6 @@ LibName34=libs/JST-XH-BattBalance
 LibName35=libs/drv8837
 LibName36=libs/3v3custom
 LibName37=libs/altera_ep4ce15e22c
+LibName38=mic94345-4ycs
+LibName39=libs/lp3987
+LibName40=libs/s25fl064p
