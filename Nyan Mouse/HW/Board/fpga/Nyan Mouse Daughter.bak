@@ -42,13 +42,13 @@ LIBS:JST-XH-BattBalance
 LIBS:Nyan Mouse Daughter-cache
 EELAYER 24 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr USLetter 11000 8500
 encoding utf-8
-Sheet 1 2
-Title ""
-Date ""
-Rev ""
-Comp ""
+Sheet 1 1
+Title "Nyan Mouse Daughter Board"
+Date "24 Apr 2014"
+Rev "Alpha"
+Comp "IEEE UCR"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -63,50 +63,6 @@ F 1 "ep4ce15e22c8n" H 1800 2000 60  0000 C CNN
 F 2 "" H 1800 2050 60  0000 C CNN
 F 3 "" H 1800 2050 60  0000 C CNN
 	1    1800 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L ep4ce15e22c8n IC?
-U 6 1 5358CDED
-P 1800 5200
-F 0 "IC?" H 1800 5250 60  0000 C CNN
-F 1 "ep4ce15e22c8n" H 1800 5150 60  0000 C CNN
-F 2 "" H 1800 5200 60  0000 C CNN
-F 3 "" H 1800 5200 60  0000 C CNN
-	6    1800 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L ep4ce15e22c8n IC?
-U 7 1 5358CDEE
-P 1800 5800
-F 0 "IC?" H 1800 5850 60  0000 C CNN
-F 1 "ep4ce15e22c8n" H 1800 5750 60  0000 C CNN
-F 2 "" H 1800 5800 60  0000 C CNN
-F 3 "" H 1800 5800 60  0000 C CNN
-	7    1800 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L ep4ce15e22c8n IC?
-U 8 1 5358CDEF
-P 1800 6400
-F 0 "IC?" H 1800 6450 60  0000 C CNN
-F 1 "ep4ce15e22c8n" H 1800 6350 60  0000 C CNN
-F 2 "" H 1800 6400 60  0000 C CNN
-F 3 "" H 1800 6400 60  0000 C CNN
-	8    1800 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L ep4ce15e22c8n IC?
-U 9 1 5358CDF0
-P 1800 6900
-F 0 "IC?" H 1800 6950 60  0000 C CNN
-F 1 "ep4ce15e22c8n" H 1800 6850 60  0000 C CNN
-F 2 "" H 1800 6900 60  0000 C CNN
-F 3 "" H 1800 6900 60  0000 C CNN
-	9    1800 6900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -934,10 +890,15 @@ F 3 "" H 4400 3000 60  0000 C CNN
 	1    4400 3000
 	1    0    0    -1  
 $EndComp
-$Sheet
-S 7000 4200 1500 750 
-U 5356D17B
-F0 "Bank C D" 50
-F1 "fpga_bank_cd.sch" 50
-$EndSheet
+$Comp
+L CONN_20X2 P?
+U 1 1 5358CF36
+P 4450 5050
+F 0 "P?" H 4450 6100 60  0000 C CNN
+F 1 "CONN_20X2" V 4450 5050 50  0000 C CNN
+F 2 "" H 4450 5050 60  0000 C CNN
+F 3 "" H 4450 5050 60  0000 C CNN
+	1    4450 5050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
