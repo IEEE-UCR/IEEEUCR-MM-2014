@@ -30,7 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:Nyan Mouse-cache
-EELAYER 27 0
+EELAYER 24 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
@@ -936,4 +936,8 @@ Text Label 6500 2700 0    60   ~ 0
 I2S_WS
 Text Label 6500 2800 0    60   ~ 0
 I2S_SD
+Text Notes 7700 6250 0    60   ~ 0
+kevin, have you finished the layout for these yet?
+Text Notes 3150 3300 0    60   ~ 0
+should I do the gyro or do you have it?
 $EndSCHEMATC
