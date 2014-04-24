@@ -1,6 +1,6 @@
-update=Thu 24 Apr 2014 01:26:05 AM PDT
+update=Thu 24 Apr 2014 01:30:05 AM PDT
 version=1
-last_client=eeschema
+last_client=kicad
 [general]
 version=1
 RootSch=
@@ -89,3 +89,13 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
+LibName31=drv8837
+LibName32=s25fl064p
+LibName33=mic94345-4ycs
+LibName34=lp3987
+LibName35=altera_ep4ce15e22c
+LibName36=3v3custom
+LibName37=tps6205x
+LibName38=stm32f103rx
+LibName39=SparkFun
+LibName40=JST-XH-BattBalance
