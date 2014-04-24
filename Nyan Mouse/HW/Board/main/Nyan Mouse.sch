@@ -30,13 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:Nyan Mouse-cache
-EELAYER 24 0
+EELAYER 27 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 5
 Title "Nyan Mouse"
-Date "23 Apr 2014"
+Date "24 apr 2014"
 Rev "Alpha"
 Comp "IEEE UCR"
 Comment1 ""
