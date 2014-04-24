@@ -29,16 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:drv8837
-LIBS:s25fl064p
-LIBS:mic94345-4ycs
-LIBS:lp3987
-LIBS:altera_ep4ce15e22c
-LIBS:3v3custom
-LIBS:tps6205x
-LIBS:stm32f103rx
-LIBS:SparkFun
-LIBS:JST-XH-BattBalance
 LIBS:Nyan Mouse Daughter-cache
 EELAYER 24 0
 EELAYER END
@@ -893,12 +883,87 @@ $EndComp
 $Comp
 L CONN_20X2 P?
 U 1 1 5358CF36
-P 4450 5050
-F 0 "P?" H 4450 6100 60  0000 C CNN
-F 1 "CONN_20X2" V 4450 5050 50  0000 C CNN
-F 2 "" H 4450 5050 60  0000 C CNN
-F 3 "" H 4450 5050 60  0000 C CNN
-	1    4450 5050
+P 3300 5650
+F 0 "P?" H 3300 6700 60  0000 C CNN
+F 1 "CONN_20X2" V 3300 5650 50  0000 C CNN
+F 2 "" H 3300 5650 60  0000 C CNN
+F 3 "" H 3300 5650 60  0000 C CNN
+	1    3300 5650
 	1    0    0    -1  
 $EndComp
+$Comp
+L AGND #PWR?
+U 1 1 5358CD8B
+P 2750 6600
+F 0 "#PWR?" H 2750 6600 40  0001 C CNN
+F 1 "AGND" V 2750 6450 50  0000 C CNN
+F 2 "" H 2750 6600 60  0000 C CNN
+F 3 "" H 2750 6600 60  0000 C CNN
+	1    2750 6600
+	0    1    1    0   
+$EndComp
+$Comp
+L AGND #PWR?
+U 1 1 5358CD9D
+P 2750 5800
+F 0 "#PWR?" H 2750 5800 40  0001 C CNN
+F 1 "AGND" V 2750 5650 50  0000 C CNN
+F 2 "" H 2750 5800 60  0000 C CNN
+F 3 "" H 2750 5800 60  0000 C CNN
+	1    2750 5800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2750 6600 2900 6600
+Wire Wire Line
+	2900 5800 2750 5800
+Wire Wire Line
+	2900 6000 2550 6000
+Wire Wire Line
+	2900 6100 2550 6100
+Wire Wire Line
+	2900 6200 2550 6200
+Wire Wire Line
+	2900 6300 2550 6300
+Wire Wire Line
+	2900 6400 2550 6400
+Wire Wire Line
+	2900 6500 2550 6500
+Wire Wire Line
+	2900 5900 2550 5900
+Text Label 2600 5900 0    60   ~ 0
+re1
+Text Label 2600 6000 0    60   ~ 0
+re2
+Text Label 2600 6100 0    60   ~ 0
+re3
+Text Label 2600 6200 0    60   ~ 0
+re4
+Text Label 2600 6300 0    60   ~ 0
+re5
+Text Label 2600 6400 0    60   ~ 0
+re6
+Text Label 2600 6500 0    60   ~ 0
+gyro_a
+Wire Wire Line
+	2900 4900 2850 4900
+Wire Wire Line
+	2850 4900 2850 4650
+$Comp
+L DGND #PWR?
+U 1 1 5358D30B
+P 2850 4650
+F 0 "#PWR?" H 2850 4650 40  0001 C CNN
+F 1 "DGND" H 2850 4580 40  0000 C CNN
+F 2 "" H 2850 4650 60  0000 C CNN
+F 3 "" H 2850 4650 60  0000 C CNN
+	1    2850 4650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2900 4700 2850 4700
+Connection ~ 2850 4700
+Wire Wire Line
+	2850 4800 2900 4800
+Connection ~ 2850 4800
 $EndSCHEMATC

@@ -29,16 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:tps6205x
-LIBS:stm32f103rx
-LIBS:SparkFun
-LIBS:JST-XH-BattBalance
-LIBS:drv8837
-LIBS:3v3custom
-LIBS:altera_ep4ce15e22c
-LIBS:mic94345-4ycs
-LIBS:lp3987
-LIBS:s25fl064p
 LIBS:Nyan Mouse-cache
 EELAYER 24 0
 EELAYER END
