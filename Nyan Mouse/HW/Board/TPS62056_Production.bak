@@ -40,7 +40,6 @@ LIBS:mic94345-4ycs
 LIBS:lp3987
 LIBS:s25fl064p
 LIBS:Nyan Mouse-cache
-LIBS:TPS62056_Production-cache
 EELAYER 24 0
 EELAYER END
 $Descr USLetter 11000 8500
