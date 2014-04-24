@@ -369,14 +369,6 @@ Wire Wire Line
 	4650 2100 5600 2100
 Wire Wire Line
 	4700 2200 5600 2200
-Text Label 5250 1900 0    60   ~ 0
-drva1
-Text Label 5250 2000 0    60   ~ 0
-drva2
-Text Label 5250 2100 0    60   ~ 0
-drvb1
-Text Label 5250 2200 0    60   ~ 0
-drvb2
 Wire Wire Line
 	5600 3500 5200 3500
 $Comp
@@ -697,4 +689,69 @@ Wire Wire Line
 	4700 2200 4700 3000
 Wire Wire Line
 	4700 3000 4200 3000
+Text Notes 5250 2200 0    60   ~ 0
+drvb2
+Text Notes 5250 2100 0    60   ~ 0
+drvb1
+Text Notes 5250 2000 0    60   ~ 0
+drva2
+Text Notes 5250 1900 0    60   ~ 0
+drva1
+$Comp
+L CONN_4 P?
+U 1 1 53589A0D
+P 7850 2550
+F 0 "P?" V 7800 2550 50  0000 C CNN
+F 1 "CONN_4" V 7900 2550 50  0000 C CNN
+F 2 "" H 7850 2550 60  0000 C CNN
+F 3 "" H 7850 2550 60  0000 C CNN
+	1    7850 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3VD #PWR?
+U 1 1 53589A81
+P 7450 2350
+F 0 "#PWR?" H 7450 2310 30  0001 C CNN
+F 1 "+3.3VD" H 7450 2460 30  0000 C CNN
+F 2 "" H 7450 2350 60  0000 C CNN
+F 3 "" H 7450 2350 60  0000 C CNN
+	1    7450 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L DGND #PWR?
+U 1 1 53589B94
+P 7450 2750
+F 0 "#PWR?" H 7450 2750 40  0001 C CNN
+F 1 "DGND" H 7450 2680 40  0000 C CNN
+F 2 "" H 7450 2750 60  0000 C CNN
+F 3 "" H 7450 2750 60  0000 C CNN
+	1    7450 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2500 7450 2500
+Wire Wire Line
+	7450 2500 7450 2750
+Wire Wire Line
+	7500 2400 7450 2400
+Wire Wire Line
+	7450 2400 7450 2350
+Wire Wire Line
+	6400 2100 7100 2100
+Wire Wire Line
+	7100 2100 7100 2600
+Wire Wire Line
+	7100 2600 7500 2600
+Wire Wire Line
+	7500 2700 7050 2700
+Wire Wire Line
+	7050 2700 7050 2200
+Wire Wire Line
+	7050 2200 6400 2200
+Text Notes 6500 2100 0    60   ~ 0
+TX
+Text Notes 6500 2200 0    60   ~ 0
+RX
 $EndSCHEMATC
