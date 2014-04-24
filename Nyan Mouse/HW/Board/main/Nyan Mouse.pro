@@ -1,15 +1,10 @@
-update=30/03/2013 13:45:59
+update=4/24/2014 3:20:29 AM
 version=1
-last_client=pcbnew
+last_client=cvpcb
 [general]
 version=1
 RootSch=
 BoardNm=
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -69,7 +64,6 @@ DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -86,3 +80,10 @@ LibName13=led
 LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
+LibName17=SparkFun
+LibDir=../libs
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
