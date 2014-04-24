@@ -418,11 +418,11 @@ Connection ~ 8300 2000
 Text Notes 6500 2000 0    60   ~ 0
 ~output enable
 Text Notes 6500 2100 0    60   ~ 0
-SDI
+SPI_SDI
 Text Notes 6500 2200 0    60   ~ 0
-SCK
+SPI_SCK
 Text Notes 6500 2300 0    60   ~ 0
-Flip Flop Clock
+SPI_Word
 Text Label 5300 2600 0    60   ~ 0
 re1
 Text Label 5300 2700 0    60   ~ 0
@@ -616,13 +616,13 @@ Wire Wire Line
 	9200 5950 9250 5950
 Wire Wire Line
 	9250 5950 9250 6000
-Text Notes 6450 3200 0    60   ~ 0
+Text Notes 6500 3200 0    60   ~ 0
 drvb2
-Text Notes 6450 3100 0    60   ~ 0
+Text Notes 6500 3100 0    60   ~ 0
 drvb1
-Text Notes 6450 3000 0    60   ~ 0
+Text Notes 6500 3000 0    60   ~ 0
 drva2
-Text Notes 6450 2900 0    60   ~ 0
+Text Notes 6500 2900 0    60   ~ 0
 drva1
 $Comp
 L CONN_4 P102
@@ -924,4 +924,16 @@ Wire Wire Line
 	6450 3500 6450 3300
 NoConn ~ 5600 2400
 NoConn ~ 5600 2500
+Wire Wire Line
+	6400 2600 7150 2600
+Wire Wire Line
+	6400 2700 7150 2700
+Wire Wire Line
+	6400 2800 7150 2800
+Text Label 6500 2600 0    60   ~ 0
+I2S_SCK
+Text Label 6500 2700 0    60   ~ 0
+I2S_WS
+Text Label 6500 2800 0    60   ~ 0
+I2S_SD
 $EndSCHEMATC
