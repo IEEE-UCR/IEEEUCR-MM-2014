@@ -16,12 +16,19 @@ Nyan Mouse is made to display Nyan Cat like blinking and audio.  From a hardware
 \section {Introduction}
 Micromouse as a competition creates an environment that requries the harmonious marriage between hardware and software.  There are many arguments that feature software or hardware as the superior micromouse success determiner, but in the end a micromouse simulator that is beautifully coded exists only in the computer and a hardware implementation with the best hardware imaginable including support for wall decoding and time delayed illumination is only a brainless device that goes forward nonstop at an unimaginable speed (probably to crash into the wall ahead of it).  Micromouse is not a simple thing to do in any sense unless one decides to make it simple (and ignore the fine detail present in any of the advanced topics which it can cover).  The most important thing to have during micromouse is probably time management; humans -- especially college humans -- are only given a finite amount of time on micromouse.  It is possible to extract time from other things, but that can end in disaster quite easily.
 
-\section {Hardware}
+\section {Implementing the Cat}
+\subsection {Hardware}
 The hardware on this micromouse is fairly complex and a full explanation of the hardware cannot be achieved easily.
 
-\section {Software}
-The software on this mouse will be my old software that ran on Overvolt.  The software is actually quite craptastinc in that it does not support full encoder guidance or mapping.  Sorry.
+In short, the main board contains the non-controller parts of nyan mouse.  This includes parts such as the motors, drive train, encoders, speakers, LEDs, and other rather important parts that have absolutely nothing to do with making a functional micromouse but instead add quirky features to a micromouse.
 
-\section {Conclusion}
-The purpose of this document was to explain what one would find in the micromouse folder and how it's supposed to work, but I forgot to do that and instead went on about the philosophy of micromouse.  Whatever.
+\subsection {Software}
+The software on this mouse will be my old software that ran on Overvolt.
+The software is actually quite craptastinc in that it does not support full encoder guidance or mapping.
+In fact, only one encoder was used because of circuit design errors encountered while not considering the therevin equivalence models of the quaterature encoders inside the Faulhaber motors.
+
+\section {Nyaning and Catting}
+
+\section {Is there any win to this game?}
+Nyan Cat as a game itself (if one can consider it a game), has no end but a definite beginning.  By default, the counter on the nyan cat webpage will keep incrementing (perhaps until it overflows at some very large number).  The purpose of this document was to explain what one would find in the micromouse folder and how it's supposed to work, but I forgot to do that and instead went on about the philosophy of micromouse.
 \end {document}

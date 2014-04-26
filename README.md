@@ -3,12 +3,12 @@ IEEEUCR-MM-2014
 
 In order to create better, exciting micromice, it is necessary to pool together work in order to create better programs to run on micromice.
 
-This repository basically has two folders: hardware and software.
+This repository has folders for all current micromice.  Some may have been abandoned in favor of better mice (refmouse V1).
 
-Within the software folder will be folders with team names on them and will include libraries for turning and such in the parent folder.  The folders with team names will use symbolic links (supported in NTFS as well) to link to the files within the main folder.
+Although it is difficult to admit to the utter data-copying, a lot of the kicad libraries are copied.
 
-Within the hardware folder, we will probably use KiCAD to plan out our PCB's.  KiCAD supports multiple-page schematics and large PCB's!
+Within the hardware realm, KiCAD is the de facto standard for making PCBs.  When micromice get really big, it's absolutely essential to choose a program that allows multipage schematics.
 
 And through these methods, we will create better micromice.
 
-Documentation is also provided through the documentation folder.
+Documentation is also provided through the documentation folder... in case anybody wants to read it.
