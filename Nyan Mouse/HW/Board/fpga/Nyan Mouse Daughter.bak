@@ -29,12 +29,24 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:ip4221cz6-s
+LIBS:3v3custom
+LIBS:adc128s052
+LIBS:altera_ep4ce15e22c
+LIBS:drv8837
+LIBS:JST-XH-BattBalance
+LIBS:lp3987
+LIBS:mic94345-4ycs
+LIBS:s25fl064p
+LIBS:SparkFun
+LIBS:stm32f103rx
+LIBS:tps6205x
 LIBS:Nyan Mouse Daughter-cache
 EELAYER 24 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title "Nyan Mouse Daughter Board"
 Date "24 Apr 2014"
 Rev "Alpha"
@@ -1060,7 +1072,7 @@ RE5
 Text Label 650  7500 0    60   ~ 0
 RE6
 Text Notes 550  5500 0    60   ~ 0
-This is a todo section.\n- ADC Layout (Symbol & Component)\n- Device Memory (Symbol & Component)\n- Mode Select\n- JTAG (Just the port)\n- Voltage Regulators (Component & Symbol)
+This is a todo section.\n- Clock Source (Component)\n- ADC Layout (Component)\n- Device Memory (Component)\n- Mode Select\n- JTAG (Just the port)\n- Voltage Regulators (Component)
 $Comp
 L LP3987 REG?
 U 1 1 535903BD
@@ -1346,4 +1358,251 @@ U 53590204
 F0 "Banks 7 and 8" 50
 F1 "fpga_bank_7_8.sch" 50
 $EndSheet
+$Comp
+L ADC128S052 U?
+U 1 1 535AAA3B
+P 4000 4700
+F 0 "U?" H 3650 5150 60  0000 C CNN
+F 1 "ADC128S052" V 3950 4700 60  0000 C CNN
+F 2 "" H 4000 4700 60  0000 C CNN
+F 3 "" H 4000 4700 60  0000 C CNN
+	1    4000 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3VA #PWR?
+U 1 1 535AAA4F
+P 4150 4250
+F 0 "#PWR?" H 4150 4370 20  0001 C CNN
+F 1 "+3.3VA" H 4150 4340 30  0000 C CNN
+F 2 "" H 4150 4250 60  0000 C CNN
+F 3 "" H 4150 4250 60  0000 C CNN
+	1    4150 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3VD #PWR?
+U 1 1 535AAA63
+P 3800 4250
+F 0 "#PWR?" H 3800 4210 30  0001 C CNN
+F 1 "+3.3VD" H 3800 4360 30  0000 C CNN
+F 2 "" H 3800 4250 60  0000 C CNN
+F 3 "" H 3800 4250 60  0000 C CNN
+	1    3800 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L DGND #PWR?
+U 1 1 535AAA77
+P 3800 5150
+F 0 "#PWR?" H 3800 5150 40  0001 C CNN
+F 1 "DGND" H 3800 5080 40  0000 C CNN
+F 2 "" H 3800 5150 60  0000 C CNN
+F 3 "" H 3800 5150 60  0000 C CNN
+	1    3800 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L AGND #PWR?
+U 1 1 535AAA8B
+P 4150 5150
+F 0 "#PWR?" H 4150 5150 40  0001 C CNN
+F 1 "AGND" H 4150 5080 50  0000 C CNN
+F 2 "" H 4150 5150 60  0000 C CNN
+F 3 "" H 4150 5150 60  0000 C CNN
+	1    4150 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 5150 4150 5100
+Wire Wire Line
+	3800 5150 3800 5100
+Wire Wire Line
+	3800 4300 3800 4250
+Wire Wire Line
+	4150 4250 4150 4300
+Wire Wire Line
+	4450 5050 5750 5050
+Wire Wire Line
+	4450 4950 5750 4950
+Wire Wire Line
+	4450 4850 5750 4850
+Wire Wire Line
+	4450 4750 5750 4750
+Wire Wire Line
+	4450 4650 5750 4650
+Wire Wire Line
+	4450 4550 5750 4550
+Wire Wire Line
+	4450 4450 5750 4450
+Text Label 5450 5050 0    60   ~ 0
+GYRO_A
+Text Label 5450 4450 0    60   ~ 0
+RE1
+Text Label 5450 4550 0    60   ~ 0
+RE2
+Text Label 5450 4650 0    60   ~ 0
+RE3
+Text Label 5450 4750 0    60   ~ 0
+RE4
+Text Label 5450 4850 0    60   ~ 0
+RE5
+Text Label 5450 4950 0    60   ~ 0
+RE6
+Wire Wire Line
+	2900 4550 3500 4550
+Wire Wire Line
+	2900 4650 3500 4650
+Wire Wire Line
+	2900 4750 3500 4750
+Wire Wire Line
+	2900 4850 3500 4850
+Text Label 2950 4550 0    60   ~ 0
+ADC_CS
+Text Label 2950 4650 0    60   ~ 0
+ADC_DIN
+Text Label 2950 4750 0    60   ~ 0
+ADC_SCLK
+Text Label 2950 4850 0    60   ~ 0
+ADC_DOUT
+$Comp
+L Csmall C?
+U 1 1 535ABF34
+P 4500 5200
+F 0 "C?" H 4525 5250 30  0000 L CNN
+F 1 "Csmall" H 4525 5150 30  0000 L CNN
+F 2 "" H 4500 5200 60  0000 C CNN
+F 3 "" H 4500 5200 60  0000 C CNN
+	1    4500 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Csmall C?
+U 1 1 535ABF48
+P 4600 5400
+F 0 "C?" H 4625 5450 30  0000 L CNN
+F 1 "Csmall" H 4625 5350 30  0000 L CNN
+F 2 "" H 4600 5400 60  0000 C CNN
+F 3 "" H 4600 5400 60  0000 C CNN
+	1    4600 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Csmall C?
+U 1 1 535ABF5C
+P 4700 5200
+F 0 "C?" H 4725 5250 30  0000 L CNN
+F 1 "Csmall" H 4725 5150 30  0000 L CNN
+F 2 "" H 4700 5200 60  0000 C CNN
+F 3 "" H 4700 5200 60  0000 C CNN
+	1    4700 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Csmall C?
+U 1 1 535ABF70
+P 4800 5400
+F 0 "C?" H 4825 5450 30  0000 L CNN
+F 1 "Csmall" H 4825 5350 30  0000 L CNN
+F 2 "" H 4800 5400 60  0000 C CNN
+F 3 "" H 4800 5400 60  0000 C CNN
+	1    4800 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Csmall C?
+U 1 1 535ABF84
+P 4900 5200
+F 0 "C?" H 4925 5250 30  0000 L CNN
+F 1 "Csmall" H 4925 5150 30  0000 L CNN
+F 2 "" H 4900 5200 60  0000 C CNN
+F 3 "" H 4900 5200 60  0000 C CNN
+	1    4900 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Csmall C?
+U 1 1 535ABF98
+P 5000 5400
+F 0 "C?" H 5025 5450 30  0000 L CNN
+F 1 "Csmall" H 5025 5350 30  0000 L CNN
+F 2 "" H 5000 5400 60  0000 C CNN
+F 3 "" H 5000 5400 60  0000 C CNN
+	1    5000 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Csmall C?
+U 1 1 535ABFAA
+P 5100 5200
+F 0 "C?" H 5125 5250 30  0000 L CNN
+F 1 "Csmall" H 5125 5150 30  0000 L CNN
+F 2 "" H 5100 5200 60  0000 C CNN
+F 3 "" H 5100 5200 60  0000 C CNN
+	1    5100 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 5100 4500 4450
+Connection ~ 4500 4450
+Wire Wire Line
+	4600 5300 4600 4550
+Connection ~ 4600 4550
+Wire Wire Line
+	4700 5100 4700 4650
+Connection ~ 4700 4650
+Wire Wire Line
+	4800 5300 4800 4750
+Connection ~ 4800 4750
+Wire Wire Line
+	4900 5100 4900 4850
+Connection ~ 4900 4850
+Wire Wire Line
+	5000 5300 5000 4950
+Connection ~ 5000 4950
+Wire Wire Line
+	5100 5100 5100 5050
+Connection ~ 5100 5050
+$Comp
+L AGND #PWR?
+U 1 1 535ACB31
+P 4800 5600
+F 0 "#PWR?" H 4800 5600 40  0001 C CNN
+F 1 "AGND" H 4800 5530 50  0000 C CNN
+F 2 "" H 4800 5600 60  0000 C CNN
+F 3 "" H 4800 5600 60  0000 C CNN
+	1    4800 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 5550 5100 5300
+Wire Wire Line
+	4500 5550 5100 5550
+Wire Wire Line
+	4900 5300 4900 5550
+Connection ~ 4900 5550
+Wire Wire Line
+	5000 5500 5000 5550
+Connection ~ 5000 5550
+Wire Wire Line
+	4800 5500 4800 5600
+Connection ~ 4800 5550
+Wire Wire Line
+	4500 5550 4500 5300
+Wire Wire Line
+	4600 5500 4600 5550
+Connection ~ 4600 5550
+Wire Wire Line
+	4700 5300 4700 5550
+Connection ~ 4700 5550
+Wire Notes Line
+	5850 5750 2850 5750
+Wire Notes Line
+	2850 5750 2850 3850
+Wire Notes Line
+	2850 3850 5850 3850
+Wire Notes Line
+	5850 3850 5850 5750
+Text Notes 3850 4050 0    100  ~ 0
+ADC
 $EndSCHEMATC
