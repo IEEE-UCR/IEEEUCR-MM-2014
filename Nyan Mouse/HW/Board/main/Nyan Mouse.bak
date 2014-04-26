@@ -859,10 +859,6 @@ Wire Wire Line
 	7050 3200 7050 6150
 Wire Wire Line
 	7050 3200 6400 3200
-NoConn ~ 5600 2200
-NoConn ~ 5600 2100
-NoConn ~ 5600 2000
-NoConn ~ 5600 1900
 Wire Wire Line
 	7350 1050 7700 1050
 Wire Wire Line
@@ -957,7 +953,7 @@ Wire Notes Line
 	10450 6700 10450 3850
 Wire Notes Line
 	10450 3850 6350 3850
-Text Notes 7950 4050 0    100  ~ 0
+Text Notes 9450 4050 0    100  ~ 0
 LOCOMOTION
 Wire Wire Line
 	7300 2400 7300 950 
@@ -985,4 +981,22 @@ Text Notes 9000 3750 0    100  ~ 0
 NYAN + CAT\n+ SENSORS
 Text Notes 8350 1500 0    60   ~ 0
 Pullup resistor for FPGA High-Z
+Wire Wire Line
+	5600 1900 5100 1900
+Wire Wire Line
+	5100 2000 5600 2000
+Wire Wire Line
+	5600 2100 5100 2100
+Wire Wire Line
+	5600 2200 5100 2200
+Text Label 5150 1900 0    60   ~ 0
+enc1a
+Text Label 5150 2000 0    60   ~ 0
+enc1b
+Text Label 5150 2100 0    60   ~ 0
+enc2a
+Text Label 5150 2200 0    60   ~ 0
+enc2b
+Text Notes 4400 4100 0    60   ~ 0
+Motor 1 should be the left motor.\nMotor 2 should be the right motor.
 $EndSCHEMATC

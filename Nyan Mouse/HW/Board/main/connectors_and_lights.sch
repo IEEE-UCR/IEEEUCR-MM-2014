@@ -29,17 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:3v3custom
-LIBS:adc128s052
-LIBS:altera_ep4ce15e22c
-LIBS:drv8837
-LIBS:JST-XH-BattBalance
-LIBS:lp3987
-LIBS:mic94345-4ycs
-LIBS:s25fl064p
-LIBS:SparkFun
-LIBS:stm32f103rx
-LIBS:tps6205x
 LIBS:Nyan Mouse-cache
 EELAYER 24 0
 EELAYER END
@@ -47,7 +36,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 3 5
 Title "Nyan Mouse"
-Date "24 apr 2014"
+Date "25 Apr 2014"
 Rev "Alpha"
 Comp "IEEE UCR"
 Comment1 ""

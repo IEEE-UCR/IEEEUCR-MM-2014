@@ -29,17 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:3v3custom
-LIBS:adc128s052
-LIBS:altera_ep4ce15e22c
-LIBS:drv8837
-LIBS:JST-XH-BattBalance
-LIBS:lp3987
-LIBS:mic94345-4ycs
-LIBS:s25fl064p
-LIBS:SparkFun
-LIBS:stm32f103rx
-LIBS:tps6205x
 LIBS:Nyan Mouse-cache
 EELAYER 24 0
 EELAYER END
@@ -47,7 +36,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 5
 Title "Nyan Mouse"
-Date "24 apr 2014"
+Date "25 Apr 2014"
 Rev "Alpha"
 Comp "IEEE UCR"
 Comment1 ""
@@ -289,15 +278,15 @@ Connection ~ 700  5950
 Text Notes 3450 7950 0    60   ~ 0
 "Connectors" for ground plane common reference point
 $Sheet
-S 8850 2200 1150 500 
+S 8850 2100 1150 500 
 U 5356EB92
 F0 "connectors and lights" 50
 F1 "connectors_and_lights.sch" 50
-F2 "SDI" O L 8850 2350 60 
-F3 "nOE" O L 8850 2250 60 
-F4 "RCLK" O L 8850 2650 60 
-F5 "SCLK" O L 8850 2450 60 
-F6 "SDO" I L 8850 2550 60 
+F2 "SDI" O L 8850 2250 60 
+F3 "nOE" O L 8850 2150 60 
+F4 "RCLK" O L 8850 2550 60 
+F5 "SCLK" O L 8850 2350 60 
+F6 "SDO" I L 8850 2450 60 
 $EndSheet
 $Comp
 L +BATT #PWR112
@@ -350,27 +339,25 @@ F 3 "" H 5450 3400 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8850 2250 8700 2250
+	8850 2150 8700 2150
 Wire Wire Line
-	8700 2000 8700 2900
+	8700 1900 8700 2900
 Wire Wire Line
-	8700 2000 6400 2000
+	8700 1900 6400 1900
 Wire Wire Line
-	8850 2350 8650 2350
+	8850 2250 8650 2250
 Wire Wire Line
-	8650 2350 8650 2100
+	8650 2250 8650 2000
 Wire Wire Line
-	8650 2100 6400 2100
+	8650 2000 6400 2000
 Wire Wire Line
-	8850 2450 8600 2450
+	8850 2350 8600 2350
 Wire Wire Line
-	8600 2200 8600 3100
+	8600 2100 8600 3100
 Wire Wire Line
-	8850 2650 8550 2650
+	8550 2200 8550 3200
 Wire Wire Line
-	8550 2300 8550 3200
-Wire Wire Line
-	8550 2300 6400 2300
+	8550 2200 6400 2200
 $Comp
 L +3.3VD #PWR129
 U 1 1 5357CEC1
@@ -397,42 +384,39 @@ F6 "re[1..6]" I L 8850 3300 60
 $EndSheet
 Wire Wire Line
 	8550 3200 8850 3200
-Connection ~ 8550 2650
 Wire Wire Line
 	8600 3100 8850 3100
-Connection ~ 8600 2450
+Connection ~ 8600 2350
 Wire Wire Line
-	8850 3000 8650 3000
+	8650 3000 8850 3000
 Wire Wire Line
-	8650 3000 8650 2550
-Wire Wire Line
-	8650 2550 8850 2550
+	8650 2450 8650 3000
 Wire Wire Line
 	8700 2900 8850 2900
-Connection ~ 8700 2250
+Connection ~ 8700 2150
 $Comp
 L R R101
 U 1 1 5357CE6B
-P 8300 1700
-F 0 "R101" V 8380 1700 40  0000 C CNN
-F 1 "10k" V 8307 1701 40  0000 C CNN
-F 2 "" V 8230 1700 30  0000 C CNN
-F 3 "" H 8300 1700 30  0000 C CNN
-	1    8300 1700
+P 8300 1600
+F 0 "R101" V 8380 1600 40  0000 C CNN
+F 1 "10k" V 8307 1601 40  0000 C CNN
+F 2 "" V 8230 1600 30  0000 C CNN
+F 3 "" H 8300 1600 30  0000 C CNN
+	1    8300 1600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8600 2200 6400 2200
+	8600 2100 6400 2100
 Wire Wire Line
-	8300 1950 8300 2000
-Connection ~ 8300 2000
-Text Notes 6500 2000 0    60   ~ 0
+	8300 1850 8300 1900
+Connection ~ 8300 1900
+Text Notes 6500 1900 0    60   ~ 0
 ~output enable
-Text Notes 6500 2100 0    60   ~ 0
+Text Notes 6500 2000 0    60   ~ 0
 SPI_SDI
-Text Notes 6500 2200 0    60   ~ 0
+Text Notes 6500 2100 0    60   ~ 0
 SPI_SCK
-Text Notes 6500 2300 0    60   ~ 0
+Text Notes 6500 2200 0    60   ~ 0
 SPI_Word
 Text Label 5300 2600 0    60   ~ 0
 re1
@@ -676,9 +660,9 @@ Wire Wire Line
 	7700 750  7650 750 
 Wire Wire Line
 	7650 750  7650 700 
-Text Notes 6500 2400 0    60   ~ 0
+Text Notes 6500 2300 0    60   ~ 0
 TX
-Text Notes 6500 2500 0    60   ~ 0
+Text Notes 6500 2400 0    60   ~ 0
 RX
 NoConn ~ 5600 2300
 NoConn ~ 1250 7550
@@ -870,10 +854,6 @@ Wire Wire Line
 	7050 3200 7050 6150
 Wire Wire Line
 	7050 3200 6400 3200
-NoConn ~ 5600 2200
-NoConn ~ 5600 2100
-NoConn ~ 5600 2000
-NoConn ~ 5600 1900
 Wire Wire Line
 	7350 1050 7700 1050
 Wire Wire Line
@@ -894,9 +874,9 @@ $EndComp
 Wire Wire Line
 	6450 3300 6400 3300
 Wire Wire Line
-	7350 2500 6400 2500
+	7350 2400 6400 2400
 Wire Wire Line
-	6400 2400 7300 2400
+	7300 2300 6400 2300
 $Comp
 L CONN_20X2 P101
 U 1 1 53572DFB
@@ -921,7 +901,6 @@ Wire Wire Line
 	5550 3500 5600 3500
 Wire Wire Line
 	6450 3500 6450 3300
-NoConn ~ 5600 2400
 NoConn ~ 5600 2500
 Wire Wire Line
 	6400 2600 7150 2600
@@ -937,7 +916,6 @@ Text Label 6500 2800 0    60   ~ 0
 I2S_SD
 Text Notes 7400 6650 0    60   ~ 0
 kevin, have you finished the layout for these yet?
-NoConn ~ 6400 1900
 Text Notes 3250 5400 0    60   ~ 0
 This is a todo section\n- Motor symbol & component\n- I2S DAC Symbol & Component\n- Audio Amplifier Symbol & Component\n- Speaker Wiring (Symbol & Component)\n- Gyro Symbol & Component
 Text Notes 4200 3250 0    60   ~ 0
@@ -970,30 +948,61 @@ Wire Notes Line
 	10450 3850 6350 3850
 Text Notes 9450 4050 0    100  ~ 0
 LOCOMOTION
-Wire Wire Line
-	7300 2400 7300 950 
-Wire Wire Line
-	7350 2500 7350 1050
 Wire Notes Line
-	6700 500  6700 1850
+	6700 400  6700 1750
 Wire Notes Line
-	6700 1850 8200 1850
+	6700 1750 8200 1750
 Wire Notes Line
-	8200 1850 8200 500 
+	8200 1750 8200 400 
 Wire Notes Line
 	8200 500  6700 500 
 Text Notes 6750 800  0    100  ~ 0
 TELEMETRY
 Wire Notes Line
-	7150 1900 7150 3800
+	7150 1800 7150 3700
 Wire Notes Line
 	7150 3800 10450 3800
 Wire Notes Line
 	10450 3800 10450 1900
 Wire Notes Line
-	10450 1900 7150 1900
+	10450 1800 7150 1800
 Text Notes 9000 3750 0    100  ~ 0
 NYAN + CAT\n+ SENSORS
 Text Notes 8350 1500 0    60   ~ 0
 Pullup resistor for FPGA High-Z
+Wire Wire Line
+	5600 1900 5100 1900
+Wire Wire Line
+	5100 2000 5600 2000
+Wire Wire Line
+	5600 2100 5100 2100
+Wire Wire Line
+	5600 2200 5100 2200
+Text Label 5150 1900 0    60   ~ 0
+enc1a
+Text Label 5150 2000 0    60   ~ 0
+enc1b
+Text Label 5150 2100 0    60   ~ 0
+enc2a
+Text Label 5150 2200 0    60   ~ 0
+enc2b
+Text Notes 4400 4100 0    60   ~ 0
+Motor 1 should be the left motor.\nMotor 2 should be the right motor.
+Wire Wire Line
+	8850 2450 8650 2450
+Wire Wire Line
+	8550 2550 8850 2550
+Connection ~ 8550 2550
+Wire Wire Line
+	7300 950  7300 2300
+Wire Wire Line
+	7350 2400 7350 1050
+Wire Wire Line
+	6400 2500 7150 2500
+Text Label 6500 2500 0    60   ~ 0
+I2S_CCLK
+Text Label 5150 2400 0    60   ~ 0
+I2S_MUTE
+Wire Wire Line
+	5100 2400 5600 2400
 $EndSCHEMATC
