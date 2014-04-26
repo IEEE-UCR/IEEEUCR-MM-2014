@@ -1072,7 +1072,7 @@ RE5
 Text Label 650  7500 0    60   ~ 0
 RE6
 Text Notes 550  5500 0    60   ~ 0
-This is a todo section.\n- Clock Source (Component)\n- ADC Layout (Component)\n- Device Memory (Component)\n- Mode Select\n- JTAG (Just the port)\n- Voltage Regulators (Component)
+This is a todo section.\n- ADC Layout (Component)\n- Device Memory (Component)\n- Mode Select
 $Comp
 L LP3987 REG?
 U 1 1 535903BD

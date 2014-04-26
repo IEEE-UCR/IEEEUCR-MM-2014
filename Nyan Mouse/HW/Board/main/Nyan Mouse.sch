@@ -918,7 +918,7 @@ Text Notes 7400 6650 0    60   ~ 0
 kevin, have you finished the layout for these yet?
 Text Notes 3250 5400 0    60   ~ 0
 This is a todo section\n- Motor symbol & component\n- I2S DAC Symbol & Component\n- Audio Amplifier Symbol & Component\n- Speaker Wiring (Symbol & Component)\n- Gyro Symbol & Component
-Text Notes 4200 3250 0    60   ~ 0
+Text Notes 500  2850 0    60   ~ 0
 SPI Bus Layout from MSB\nX\nX\nIR 5\nIR 4\nIR 3\nIR 2\nIR 1\n\nX\nX\nX\nX\nLED Color 3\nLED Color 2\nLED Color 1\nLED Select 9\n\nLED Select 8\nLED Select 7\nLED Select 6\nLED Select 5\nLED Select 4\nLED Select 3\nLED Select 2\nLED Select 1
 Wire Notes Line
 	6200 5650 6200 8000

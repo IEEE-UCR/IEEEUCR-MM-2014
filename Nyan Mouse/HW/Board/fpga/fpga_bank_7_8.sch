@@ -29,7 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ip4221cz6-s
 LIBS:3v3custom
 LIBS:adc128s052
 LIBS:altera_ep4ce15e22c
@@ -41,16 +40,17 @@ LIBS:s25fl064p
 LIBS:SparkFun
 LIBS:stm32f103rx
 LIBS:tps6205x
+LIBS:ip4221cz6-s
 LIBS:Nyan Mouse Daughter-cache
 EELAYER 24 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 5 5
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Nyan Mouse Daughter Board"
+Date "25 Apr 2014"
+Rev "Alpha"
+Comp "IEEE UCR"
 Comment1 ""
 Comment2 ""
 Comment3 ""
