@@ -1,0 +1,143 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 576 384)
+	(text "nyan_mouse" (rect 251 -1 304 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 368 20 380)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 256 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "pio_0_external_connection_in_port[31..0]" (rect 0 0 161 12)(font "Arial" (font_size 8)))
+		(text "pio_0_external_connection_in_port[31..0]" (rect 4 101 244 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 256 112)(line_width 3))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "uart_0_external_connection_rxd" (rect 0 0 128 12)(font "Arial" (font_size 8)))
+		(text "uart_0_external_connection_rxd" (rect 4 157 184 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 256 168)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "adc_spi_MISO" (rect 0 0 60 12)(font "Arial" (font_size 8)))
+		(text "adc_spi_MISO" (rect 4 213 76 224)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 256 224)(line_width 1))
+	)
+	(port
+		(pt 0 312)
+		(input)
+		(text "encoder_in_external_connection_export[3..0]" (rect 0 0 178 12)(font "Arial" (font_size 8)))
+		(text "encoder_in_external_connection_export[3..0]" (rect 4 301 262 312)(font "Arial" (font_size 8)))
+		(line (pt 0 312)(pt 256 312)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(output)
+		(text "pio_0_external_connection_out_port[31..0]" (rect 0 0 167 12)(font "Arial" (font_size 8)))
+		(text "pio_0_external_connection_out_port[31..0]" (rect 4 117 250 128)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 256 128)(line_width 3))
+	)
+	(port
+		(pt 0 184)
+		(output)
+		(text "uart_0_external_connection_txd" (rect 0 0 127 12)(font "Arial" (font_size 8)))
+		(text "uart_0_external_connection_txd" (rect 4 173 184 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 256 184)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(output)
+		(text "adc_spi_MOSI" (rect 0 0 60 12)(font "Arial" (font_size 8)))
+		(text "adc_spi_MOSI" (rect 4 229 76 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 256 240)(line_width 1))
+	)
+	(port
+		(pt 0 256)
+		(output)
+		(text "adc_spi_SCLK" (rect 0 0 62 12)(font "Arial" (font_size 8)))
+		(text "adc_spi_SCLK" (rect 4 245 76 256)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 256 256)(line_width 1))
+	)
+	(port
+		(pt 0 272)
+		(output)
+		(text "adc_spi_SS_n" (rect 0 0 59 12)(font "Arial" (font_size 8)))
+		(text "adc_spi_SS_n" (rect 4 261 76 272)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 256 272)(line_width 1))
+	)
+	(port
+		(pt 0 352)
+		(output)
+		(text "motor_control_external_connection_export[3..0]" (rect 0 0 189 12)(font "Arial" (font_size 8)))
+		(text "motor_control_external_connection_export[3..0]" (rect 4 341 280 352)(font "Arial" (font_size 8)))
+		(line (pt 0 352)(pt 256 352)(line_width 3))
+	)
+	(drawing
+		(text "clk" (rect 241 43 500 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 261 67 540 144)(font "Arial" (color 0 0 0)))
+		(text "pio_0_external_connection" (rect 102 83 354 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "in_port" (rect 261 107 564 224)(font "Arial" (color 0 0 0)))
+		(text "out_port" (rect 261 123 570 256)(font "Arial" (color 0 0 0)))
+		(text "uart_0_external_connection" (rect 96 139 348 291)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "rxd" (rect 261 163 540 336)(font "Arial" (color 0 0 0)))
+		(text "txd" (rect 261 179 540 368)(font "Arial" (color 0 0 0)))
+		(text "adc_spi" (rect 212 195 466 403)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "MISO" (rect 261 219 546 448)(font "Arial" (color 0 0 0)))
+		(text "MOSI" (rect 261 235 546 480)(font "Arial" (color 0 0 0)))
+		(text "SCLK" (rect 261 251 546 512)(font "Arial" (color 0 0 0)))
+		(text "SS_n" (rect 261 267 546 544)(font "Arial" (color 0 0 0)))
+		(text "encoder_in_external_connection" (rect 70 283 320 579)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 261 307 558 624)(font "Arial" (color 0 0 0)))
+		(text "motor_control_external_connection" (rect 53 323 304 659)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 261 347 558 704)(font "Arial" (color 0 0 0)))
+		(text " nyan_mouse " (rect 518 368 1108 746)(font "Arial" ))
+		(line (pt 257 52)(pt 257 76)(line_width 1))
+		(line (pt 258 52)(pt 258 76)(line_width 1))
+		(line (pt 257 92)(pt 257 132)(line_width 1))
+		(line (pt 258 92)(pt 258 132)(line_width 1))
+		(line (pt 257 148)(pt 257 188)(line_width 1))
+		(line (pt 258 148)(pt 258 188)(line_width 1))
+		(line (pt 257 204)(pt 257 276)(line_width 1))
+		(line (pt 258 204)(pt 258 276)(line_width 1))
+		(line (pt 257 292)(pt 257 316)(line_width 1))
+		(line (pt 258 292)(pt 258 316)(line_width 1))
+		(line (pt 257 332)(pt 257 356)(line_width 1))
+		(line (pt 258 332)(pt 258 356)(line_width 1))
+		(line (pt 256 32)(pt 320 32)(line_width 1))
+		(line (pt 320 32)(pt 320 368)(line_width 1))
+		(line (pt 256 368)(pt 320 368)(line_width 1))
+		(line (pt 256 32)(pt 256 368)(line_width 1))
+		(line (pt 0 0)(pt 576 0)(line_width 1))
+		(line (pt 576 0)(pt 576 384)(line_width 1))
+		(line (pt 0 384)(pt 576 384)(line_width 1))
+		(line (pt 0 0)(pt 0 384)(line_width 1))
+	)
+)

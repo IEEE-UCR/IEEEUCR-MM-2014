@@ -1,0 +1,891 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/" --file-set=SIM_VERILOG --report-file="html:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.html" --report-file="sopcinfo:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.sopcinfo" --report-file="csv:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.csv" --report-file="spd:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.spd" --report-file="sip:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/nyan_mouse.sip" --report-file="cmp:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.cmp" --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE15E22C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.qsys"
+Progress: Loading FPGA/nyan_mouse.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding magic_GPIO [altera_avalon_pio 13.1]
+Progress: Parameterizing module magic_GPIO
+Progress: Adding processor_0 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module processor_0
+Progress: Adding nios_custom_instr_floating_point_2_0 [altera_nios_custom_instr_floating_point_2 100.99.98.97]
+Progress: Parameterizing module nios_custom_instr_floating_point_2_0
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 13.1]
+Progress: Parameterizing module performance_counter_0
+Progress: Adding systick [altera_avalon_timer 13.1]
+Progress: Parameterizing module systick
+Progress: Adding bt_debug [altera_avalon_uart 13.1]
+Progress: Parameterizing module bt_debug
+Progress: Adding memory_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module memory_0
+Progress: Adding adc_interface [altera_avalon_spi 13.1]
+Progress: Parameterizing module adc_interface
+Progress: Adding encoder_in [altera_avalon_pio 13.1]
+Progress: Parameterizing module encoder_in
+Progress: Adding motor_control [altera_avalon_pio 13.1]
+Progress: Parameterizing module motor_control
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nyan_mouse.magic_GPIO: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse.encoder_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse: Generating nyan_mouse "nyan_mouse" for SIM_VERILOG
+Info: pipeline_bridge_swap_transform: After transform: 11 modules, 46 connections
+Info: merlin_custom_instruction_transform: After transform: 16 modules, 51 connections
+Info: merlin_initial_interconnect_transform: After transform: 10 modules, 38 connections
+Info: merlin_translator_transform: After transform: 21 modules, 82 connections
+Info: merlin_domain_transform: After transform: 42 modules, 224 connections
+Info: merlin_router_transform: After transform: 53 modules, 268 connections
+Info: merlin_traffic_limiter_transform: After transform: 55 modules, 278 connections
+Info: merlin_network_to_switch_transform: After transform: 76 modules, 333 connections
+Info: limiter_update_transform: After transform: 76 modules, 335 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 78 modules, 412 connections
+Info: merlin_hierarchy_transform: After transform: 17 modules, 54 connections
+Info: merlin_mm_transform: After transform: 17 modules, 54 connections
+Info: merlin_interrupt_mapper_transform: After transform: 18 modules, 58 connections
+Info: reset_adaptation_transform: After transform: 20 modules, 60 connections
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_translator:ci_slave:ci_slave_ipending (ipending)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_translator:ci_slave:ci_slave_estatus (estatus)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning: nyan_mouse: "No matching role found for bt_debug:s1:dataavailable (dataavailable)"
+Warning: nyan_mouse: "No matching role found for bt_debug:s1:readyfordata (readyfordata)"
+Info: magic_GPIO: Starting RTL generation for module 'nyan_mouse_magic_GPIO'
+Info: magic_GPIO:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nyan_mouse_magic_GPIO --dir=/tmp/alt6186_6868421522501446980.dir/0002_magic_GPIO_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0002_magic_GPIO_gen//nyan_mouse_magic_GPIO_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0002_magic_GPIO_gen/  ]
+Info: magic_GPIO: Done RTL generation for module 'nyan_mouse_magic_GPIO'
+Info: magic_GPIO: "nyan_mouse" instantiated altera_avalon_pio "magic_GPIO"
+Info: processor_0: Starting RTL generation for module 'nyan_mouse_processor_0'
+Info: processor_0:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/eperlcmd -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -- /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=nyan_mouse_processor_0 --dir=/tmp/alt6186_6868421522501446980.dir/0003_processor_0_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0003_processor_0_gen//nyan_mouse_processor_0_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0003_processor_0_gen/  ]
+Info: processor_0: # 2014.04.26 14:49:21 (*) Starting Nios II generation
+Info: processor_0: # 2014.04.26 14:49:21 (*)   Checking for plaintext license.
+Info: processor_0: # 2014.04.26 14:49:25 (*)   Couldn't query license setup in Quartus directory /home/brandon/altera/13.1/quartus
+Info: processor_0: # 2014.04.26 14:49:25 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: processor_0: # 2014.04.26 14:49:25 (*)   LM_LICENSE_FILE environment variable is empty
+Info: processor_0: # 2014.04.26 14:49:25 (*)   Plaintext license not found.
+Info: processor_0: # 2014.04.26 14:49:25 (*)   Checking for encrypted license (non-evaluation).
+Info: processor_0: # 2014.04.26 14:49:28 (*)   Couldn't query license setup in Quartus directory /home/brandon/altera/13.1/quartus
+Info: processor_0: # 2014.04.26 14:49:28 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: processor_0: # 2014.04.26 14:49:28 (*)   LM_LICENSE_FILE environment variable is empty
+Info: processor_0: # 2014.04.26 14:49:28 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: processor_0: # 2014.04.26 14:49:28 (*)   Elaborating CPU configuration settings
+Info: processor_0: # 2014.04.26 14:49:28 (*)   Creating all objects for CPU
+Info: processor_0: # 2014.04.26 14:49:28 (*)     Testbench
+Info: processor_0: # 2014.04.26 14:49:28 (*)     Instruction decoding
+Info: processor_0: # 2014.04.26 14:49:28 (*)       Instruction fields
+Info: processor_0: # 2014.04.26 14:49:28 (*)       Instruction decodes
+Info: processor_0: # 2014.04.26 14:49:29 (*)       Signals for RTL simulation waveforms
+Info: processor_0: # 2014.04.26 14:49:29 (*)       Instruction controls
+Info: processor_0: # 2014.04.26 14:49:29 (*)     Pipeline frontend
+Info: processor_0: # 2014.04.26 14:49:29 (*)     Pipeline backend
+Info: processor_0: # 2014.04.26 14:49:33 (*)   Creating '/tmp/alt6186_6868421522501446980.dir/0003_processor_0_gen//nyan_mouse_processor_0_nios2_waves.do'
+Info: processor_0: # 2014.04.26 14:49:33 (*)   Generating RTL from CPU objects
+Info: processor_0: # 2014.04.26 14:49:38 (*)   Creating encrypted RTL
+Info: processor_0: # 2014.04.26 14:49:40 (*)   Creating IP functional simulation model
+Info: processor_0: # 2014.04.26 14:50:03 (*) Done Nios II generation
+Info: processor_0: Done RTL generation for module 'nyan_mouse_processor_0'
+Info: processor_0: "nyan_mouse" instantiated altera_nios2_qsys "processor_0"
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: nios_custom_instr_floating_point_2_0: "nyan_mouse" instantiated altera_nios_custom_instr_floating_point_2 "nios_custom_instr_floating_point_2_0"
+Info: performance_counter_0: Starting RTL generation for module 'nyan_mouse_performance_counter_0'
+Info: performance_counter_0:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_performance_counter -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_performance_counter/generate_rtl.pl --name=nyan_mouse_performance_counter_0 --dir=/tmp/alt6186_6868421522501446980.dir/0004_performance_counter_0_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0004_performance_counter_0_gen//nyan_mouse_performance_counter_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0004_performance_counter_0_gen/  ]
+Info: performance_counter_0: Done RTL generation for module 'nyan_mouse_performance_counter_0'
+Info: performance_counter_0: "nyan_mouse" instantiated altera_avalon_performance_counter "performance_counter_0"
+Info: systick: Starting RTL generation for module 'nyan_mouse_systick'
+Info: systick:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux//perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux//perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=nyan_mouse_systick --dir=/tmp/alt6186_6868421522501446980.dir/0005_systick_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0005_systick_gen//nyan_mouse_systick_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0005_systick_gen/  ]
+Info: systick: Done RTL generation for module 'nyan_mouse_systick'
+Info: systick: "nyan_mouse" instantiated altera_avalon_timer "systick"
+Info: bt_debug: Starting RTL generation for module 'nyan_mouse_bt_debug'
+Info: bt_debug:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=nyan_mouse_bt_debug --dir=/tmp/alt6186_6868421522501446980.dir/0006_bt_debug_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0006_bt_debug_gen//nyan_mouse_bt_debug_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0006_bt_debug_gen/  ]
+Info: bt_debug: Done RTL generation for module 'nyan_mouse_bt_debug'
+Info: bt_debug: "nyan_mouse" instantiated altera_avalon_uart "bt_debug"
+Info: memory_0: Starting RTL generation for module 'nyan_mouse_memory_0'
+Info: memory_0:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nyan_mouse_memory_0 --dir=/tmp/alt6186_6868421522501446980.dir/0007_memory_0_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0007_memory_0_gen//nyan_mouse_memory_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0007_memory_0_gen/  ]
+Info: memory_0: Done RTL generation for module 'nyan_mouse_memory_0'
+Info: memory_0: "nyan_mouse" instantiated altera_avalon_onchip_memory2 "memory_0"
+Info: adc_interface: Starting RTL generation for module 'nyan_mouse_adc_interface'
+Info: adc_interface:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=nyan_mouse_adc_interface --dir=/tmp/alt6186_6868421522501446980.dir/0008_adc_interface_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0008_adc_interface_gen//nyan_mouse_adc_interface_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0008_adc_interface_gen/  ]
+Info: adc_interface: Done RTL generation for module 'nyan_mouse_adc_interface'
+Info: adc_interface: "nyan_mouse" instantiated altera_avalon_spi "adc_interface"
+Info: encoder_in: Starting RTL generation for module 'nyan_mouse_encoder_in'
+Info: encoder_in:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nyan_mouse_encoder_in --dir=/tmp/alt6186_6868421522501446980.dir/0009_encoder_in_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0009_encoder_in_gen//nyan_mouse_encoder_in_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0009_encoder_in_gen/  ]
+Info: encoder_in: Done RTL generation for module 'nyan_mouse_encoder_in'
+Info: encoder_in: "nyan_mouse" instantiated altera_avalon_pio "encoder_in"
+Info: motor_control: Starting RTL generation for module 'nyan_mouse_motor_control'
+Info: motor_control:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nyan_mouse_motor_control --dir=/tmp/alt6186_6868421522501446980.dir/0010_motor_control_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0010_motor_control_gen//nyan_mouse_motor_control_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0010_motor_control_gen/  ]
+Info: motor_control: Done RTL generation for module 'nyan_mouse_motor_control'
+Info: motor_control: "nyan_mouse" instantiated altera_avalon_pio "motor_control"
+Info: processor_0_custom_instruction_master_translator: "nyan_mouse" instantiated altera_customins_master_translator "processor_0_custom_instruction_master_translator"
+Info: processor_0_custom_instruction_master_comb_xconnect: "nyan_mouse" instantiated altera_customins_xconnect "processor_0_custom_instruction_master_comb_xconnect"
+Info: processor_0_custom_instruction_master_comb_slave_translator0: "nyan_mouse" instantiated altera_customins_slave_translator "processor_0_custom_instruction_master_comb_slave_translator0"
+Info: processor_0_custom_instruction_master_multi_xconnect: "nyan_mouse" instantiated altera_customins_xconnect "processor_0_custom_instruction_master_multi_xconnect"
+Info: pipeline_bridge_swap_transform: After transform: 68 modules, 232 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: mm_interconnect_0: "nyan_mouse" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_0"
+Info: irq_mapper: "nyan_mouse" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "nyan_mouse" instantiated altera_reset_controller "rst_controller"
+Info: fpci_combi: "nios_custom_instr_floating_point_2_0" instantiated altera_nios_custom_instr_floating_point_2_combi "fpci_combi"
+Info: fpci_multi: "nios_custom_instr_floating_point_2_0" instantiated altera_nios_custom_instr_floating_point_2_multi "fpci_multi"
+Info: processor_0_instruction_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "processor_0_instruction_master_translator"
+Info: processor_0_jtag_debug_module_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "processor_0_jtag_debug_module_translator"
+Info: processor_0_instruction_master_translator_avalon_universal_master_0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "processor_0_instruction_master_translator_avalon_universal_master_0_agent"
+Info: processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info: processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "mm_interconnect_0" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "mm_interconnect_0" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "mm_interconnect_0" instantiated altera_merlin_router "id_router"
+Info: id_router_002: "mm_interconnect_0" instantiated altera_merlin_router "id_router_002"
+Info: limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "limiter"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/submodules/altera_avalon_sc_fifo.v
+Info: cmd_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: cmd_xbar_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux_002"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_002"
+Info: rsp_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/submodules/altera_merlin_arbitrator.sv
+Info: nyan_mouse: Done "nyan_mouse" with 38 modules, 89 files, 2468311 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.spd" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/"
+Info: Doing: ip-make-simscript --spd=/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.spd --output-directory=/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	37 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: 
+Info: Starting: Create testbench Qsys system
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse.ipx
+Info: ip-generate --project-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/" --report-file="sopcinfo:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.sopcinfo" --report-file="html:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.html" --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE15E22C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.qsys"
+Progress: Loading FPGA/nyan_mouse.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding magic_GPIO [altera_avalon_pio 13.1]
+Progress: Parameterizing module magic_GPIO
+Progress: Adding processor_0 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module processor_0
+Progress: Adding nios_custom_instr_floating_point_2_0 [altera_nios_custom_instr_floating_point_2 100.99.98.97]
+Progress: Parameterizing module nios_custom_instr_floating_point_2_0
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 13.1]
+Progress: Parameterizing module performance_counter_0
+Progress: Adding systick [altera_avalon_timer 13.1]
+Progress: Parameterizing module systick
+Progress: Adding bt_debug [altera_avalon_uart 13.1]
+Progress: Parameterizing module bt_debug
+Progress: Adding memory_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module memory_0
+Progress: Adding adc_interface [altera_avalon_spi 13.1]
+Progress: Parameterizing module adc_interface
+Progress: Adding encoder_in [altera_avalon_pio 13.1]
+Progress: Parameterizing module encoder_in
+Progress: Adding motor_control [altera_avalon_pio 13.1]
+Progress: Parameterizing module motor_control
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nyan_mouse.magic_GPIO: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse.encoder_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: ip-generate succeeded.
+Info: Loading component library for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (1) searching /home/brandon/altera/13.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index /home/brandon/altera/13.1/quartus/sopc_builder/bin/root_components.ipx
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/root_components.ipx: Loading now from components.ipx
+Info: Reading index /home/brandon/altera/13.1/quartus/sopc_builder/bin/ip_component_categories.ipx
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.01 seconds
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.01 seconds
+Info: Reading index /home/brandon/altera/13.1/ip/altera/altera_components.ipx
+Info: /home/brandon/altera/13.1/ip/altera/altera_components.ipx described 870 plugins, 0 paths, in 0.11 seconds
+Info: /home/brandon/altera/13.1/ip/**/* matched 97 files in 0.12 seconds
+Info: /home/brandon/.altera.quartus/ip/13.1/**/* matched 0 files in 0.00 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse.ipx
+Progress: Loading FPGA/nyan_mouse.qsys
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/* matched 13 files in 0.00 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/ip/**/* matched 0 files in 0.00 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/*/* matched 7 files in 0.00 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse.ipx described 0 plugins, 3 paths, in 0.00 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/* matched 1 files in 0.00 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/*/* matched 0 files in 0.00 seconds
+Info: Reading index /home/brandon/altera/13.1/quartus/sopc_builder/builtin.ipx
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/builtin.ipx described 97 plugins, 0 paths, in 0.03 seconds
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/**/* matched 9 files in 0.03 seconds
+Info: Reading index /home/brandon/altera/13.1/quartus/common/librarian/factories/index.ipx
+Info: /home/brandon/altera/13.1/quartus/common/librarian/factories/index.ipx described 151 plugins, 0 paths, in 0.07 seconds
+Info: /home/brandon/altera/13.1/quartus/common/librarian/factories/**/* matched 4 files in 0.07 seconds
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 9 paths, in 0.24 seconds
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.24 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Loading presets
+Progress: Loading presets
+Info: Running script /home/brandon/altera/13.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: acds::register_package_version 12.1
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: nyan_mouse
+Info: TB_Gen: System design is: nyan_mouse
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property pio_0_external_connection EXPORT_OF
+Info: get_instance_property magic_GPIO CLASS_NAME
+Info: get_instance_assignment magic_GPIO testbench.partner.map.external_connection
+Info: get_interface_property uart_0_external_connection EXPORT_OF
+Info: get_instance_property bt_debug CLASS_NAME
+Info: get_instance_assignment bt_debug testbench.partner.map.external_connection
+Info: get_interface_property adc_spi EXPORT_OF
+Info: get_instance_property adc_interface CLASS_NAME
+Info: get_instance_assignment adc_interface testbench.partner.map.external
+Info: get_interface_property encoder_in_external_connection EXPORT_OF
+Info: get_instance_property encoder_in CLASS_NAME
+Info: get_instance_assignment encoder_in testbench.partner.map.external_connection
+Info: get_interface_property motor_control_external_connection EXPORT_OF
+Info: get_instance_property motor_control CLASS_NAME
+Info: get_instance_assignment motor_control testbench.partner.map.external_connection
+Info: send_message Info TB_Gen: Creating testbench system : nyan_mouse_tb with all standard BFMs
+Info: TB_Gen: Creating testbench system : nyan_mouse_tb with all standard BFMs
+Info: create_system nyan_mouse_tb
+Info: add_instance nyan_mouse_inst nyan_mouse 
+Info: set_use_testbench_naming_pattern true
+Info: get_instance_interfaces nyan_mouse_inst
+Info: get_instance_interface_property nyan_mouse_inst clk CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst pio_0_external_connection CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst uart_0_external_connection CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst adc_spi CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst encoder_in_external_connection CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst motor_control_external_connection CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst clk CLASS_NAME
+Info: send_message Info TB_Gen: clock_sink found: clk
+Info: TB_Gen: clock_sink found: clk
+Info: get_instance_interface_property nyan_mouse_inst clk CLASS_NAME
+Info: add_instance nyan_mouse_inst_clk_bfm altera_avalon_clock_source 
+Info: get_instance_property nyan_mouse_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value nyan_mouse_inst clk clockRate
+Info: set_instance_parameter_value nyan_mouse_inst_clk_bfm CLOCK_RATE 50000000.0
+Info: set_instance_parameter_value nyan_mouse_inst_clk_bfm CLOCK_UNIT 1
+Info: get_instance_property nyan_mouse_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst clk CLASS_NAME
+Info: get_instance_interfaces nyan_mouse_inst_clk_bfm
+Info: get_instance_interface_property nyan_mouse_inst_clk_bfm clk CLASS_NAME
+Info: add_connection nyan_mouse_inst_clk_bfm.clk nyan_mouse_inst.clk
+Info: get_instance_interface_property nyan_mouse_inst pio_0_external_connection CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: pio_0_external_connection
+Info: TB_Gen: conduit_end found: pio_0_external_connection
+Info: get_instance_interface_property nyan_mouse_inst pio_0_external_connection CLASS_NAME
+Info: add_instance nyan_mouse_inst_pio_0_external_connection_bfm altera_conduit_bfm 
+Info: get_instance_property nyan_mouse_inst_pio_0_external_connection_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value nyan_mouse_inst pio_0_external_connection associatedClock
+Info: get_instance_interface_parameter_value nyan_mouse_inst pio_0_external_connection associatedReset
+Info: get_instance_interface_ports nyan_mouse_inst pio_0_external_connection
+Info: get_instance_interface_port_property nyan_mouse_inst pio_0_external_connection pio_0_external_connection_in_port ROLE
+Info: get_instance_interface_port_property nyan_mouse_inst pio_0_external_connection pio_0_external_connection_in_port WIDTH
+Info: get_instance_interface_port_property nyan_mouse_inst pio_0_external_connection pio_0_external_connection_in_port DIRECTION
+Info: get_instance_interface_port_property nyan_mouse_inst pio_0_external_connection pio_0_external_connection_out_port ROLE
+Info: get_instance_interface_port_property nyan_mouse_inst pio_0_external_connection pio_0_external_connection_out_port WIDTH
+Info: get_instance_interface_port_property nyan_mouse_inst pio_0_external_connection pio_0_external_connection_out_port DIRECTION
+Info: set_instance_parameter_value nyan_mouse_inst_pio_0_external_connection_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value nyan_mouse_inst_pio_0_external_connection_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value nyan_mouse_inst_pio_0_external_connection_bfm SIGNAL_ROLES in_port out_port
+Info: set_instance_parameter_value nyan_mouse_inst_pio_0_external_connection_bfm SIGNAL_WIDTHS 32 32
+Info: set_instance_parameter_value nyan_mouse_inst_pio_0_external_connection_bfm SIGNAL_DIRECTIONS output input
+Info: get_instance_property nyan_mouse_inst_pio_0_external_connection_bfm CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst pio_0_external_connection CLASS_NAME
+Info: get_instance_interfaces nyan_mouse_inst_pio_0_external_connection_bfm
+Info: get_instance_interface_property nyan_mouse_inst_pio_0_external_connection_bfm conduit CLASS_NAME
+Info: add_connection nyan_mouse_inst_pio_0_external_connection_bfm.conduit nyan_mouse_inst.pio_0_external_connection
+Info: get_instance_interface_property nyan_mouse_inst uart_0_external_connection CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: uart_0_external_connection
+Info: TB_Gen: conduit_end found: uart_0_external_connection
+Info: get_instance_interface_property nyan_mouse_inst uart_0_external_connection CLASS_NAME
+Info: add_instance nyan_mouse_inst_uart_0_external_connection_bfm altera_conduit_bfm 
+Info: get_instance_property nyan_mouse_inst_uart_0_external_connection_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value nyan_mouse_inst uart_0_external_connection associatedClock
+Info: get_instance_interface_parameter_value nyan_mouse_inst uart_0_external_connection associatedReset
+Info: get_instance_interface_ports nyan_mouse_inst uart_0_external_connection
+Info: get_instance_interface_port_property nyan_mouse_inst uart_0_external_connection uart_0_external_connection_rxd ROLE
+Info: get_instance_interface_port_property nyan_mouse_inst uart_0_external_connection uart_0_external_connection_rxd WIDTH
+Info: get_instance_interface_port_property nyan_mouse_inst uart_0_external_connection uart_0_external_connection_rxd DIRECTION
+Info: get_instance_interface_port_property nyan_mouse_inst uart_0_external_connection uart_0_external_connection_txd ROLE
+Info: get_instance_interface_port_property nyan_mouse_inst uart_0_external_connection uart_0_external_connection_txd WIDTH
+Info: get_instance_interface_port_property nyan_mouse_inst uart_0_external_connection uart_0_external_connection_txd DIRECTION
+Info: set_instance_parameter_value nyan_mouse_inst_uart_0_external_connection_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value nyan_mouse_inst_uart_0_external_connection_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value nyan_mouse_inst_uart_0_external_connection_bfm SIGNAL_ROLES rxd txd
+Info: set_instance_parameter_value nyan_mouse_inst_uart_0_external_connection_bfm SIGNAL_WIDTHS 1 1
+Info: set_instance_parameter_value nyan_mouse_inst_uart_0_external_connection_bfm SIGNAL_DIRECTIONS output input
+Info: get_instance_property nyan_mouse_inst_uart_0_external_connection_bfm CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst uart_0_external_connection CLASS_NAME
+Info: get_instance_interfaces nyan_mouse_inst_uart_0_external_connection_bfm
+Info: get_instance_interface_property nyan_mouse_inst_uart_0_external_connection_bfm conduit CLASS_NAME
+Info: add_connection nyan_mouse_inst_uart_0_external_connection_bfm.conduit nyan_mouse_inst.uart_0_external_connection
+Info: get_instance_interface_property nyan_mouse_inst adc_spi CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: adc_spi
+Info: TB_Gen: conduit_end found: adc_spi
+Info: get_instance_interface_property nyan_mouse_inst adc_spi CLASS_NAME
+Info: add_instance nyan_mouse_inst_adc_spi_bfm altera_conduit_bfm 
+Info: get_instance_property nyan_mouse_inst_adc_spi_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value nyan_mouse_inst adc_spi associatedClock
+Info: get_instance_interface_parameter_value nyan_mouse_inst adc_spi associatedReset
+Info: get_instance_interface_ports nyan_mouse_inst adc_spi
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_MISO ROLE
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_MISO WIDTH
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_MISO DIRECTION
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_MOSI ROLE
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_MOSI WIDTH
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_MOSI DIRECTION
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_SCLK ROLE
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_SCLK WIDTH
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_SCLK DIRECTION
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_SS_n ROLE
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_SS_n WIDTH
+Info: get_instance_interface_port_property nyan_mouse_inst adc_spi adc_spi_SS_n DIRECTION
+Info: set_instance_parameter_value nyan_mouse_inst_adc_spi_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value nyan_mouse_inst_adc_spi_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value nyan_mouse_inst_adc_spi_bfm SIGNAL_ROLES MISO MOSI SCLK SS_n
+Info: set_instance_parameter_value nyan_mouse_inst_adc_spi_bfm SIGNAL_WIDTHS 1 1 1 1
+Info: set_instance_parameter_value nyan_mouse_inst_adc_spi_bfm SIGNAL_DIRECTIONS output input input input
+Info: get_instance_property nyan_mouse_inst_adc_spi_bfm CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst adc_spi CLASS_NAME
+Info: get_instance_interfaces nyan_mouse_inst_adc_spi_bfm
+Info: get_instance_interface_property nyan_mouse_inst_adc_spi_bfm conduit CLASS_NAME
+Info: add_connection nyan_mouse_inst_adc_spi_bfm.conduit nyan_mouse_inst.adc_spi
+Info: get_instance_interface_property nyan_mouse_inst encoder_in_external_connection CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: encoder_in_external_connection
+Info: TB_Gen: conduit_end found: encoder_in_external_connection
+Info: get_instance_interface_property nyan_mouse_inst encoder_in_external_connection CLASS_NAME
+Info: add_instance nyan_mouse_inst_encoder_in_external_connection_bfm altera_conduit_bfm 
+Info: get_instance_property nyan_mouse_inst_encoder_in_external_connection_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value nyan_mouse_inst encoder_in_external_connection associatedClock
+Info: get_instance_interface_parameter_value nyan_mouse_inst encoder_in_external_connection associatedReset
+Info: get_instance_interface_ports nyan_mouse_inst encoder_in_external_connection
+Info: get_instance_interface_port_property nyan_mouse_inst encoder_in_external_connection encoder_in_external_connection_export ROLE
+Info: get_instance_interface_port_property nyan_mouse_inst encoder_in_external_connection encoder_in_external_connection_export WIDTH
+Info: get_instance_interface_port_property nyan_mouse_inst encoder_in_external_connection encoder_in_external_connection_export DIRECTION
+Info: set_instance_parameter_value nyan_mouse_inst_encoder_in_external_connection_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value nyan_mouse_inst_encoder_in_external_connection_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value nyan_mouse_inst_encoder_in_external_connection_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value nyan_mouse_inst_encoder_in_external_connection_bfm SIGNAL_WIDTHS 4
+Info: set_instance_parameter_value nyan_mouse_inst_encoder_in_external_connection_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property nyan_mouse_inst_encoder_in_external_connection_bfm CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst encoder_in_external_connection CLASS_NAME
+Info: get_instance_interfaces nyan_mouse_inst_encoder_in_external_connection_bfm
+Info: get_instance_interface_property nyan_mouse_inst_encoder_in_external_connection_bfm conduit CLASS_NAME
+Info: add_connection nyan_mouse_inst_encoder_in_external_connection_bfm.conduit nyan_mouse_inst.encoder_in_external_connection
+Info: get_instance_interface_property nyan_mouse_inst motor_control_external_connection CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: motor_control_external_connection
+Info: TB_Gen: conduit_end found: motor_control_external_connection
+Info: get_instance_interface_property nyan_mouse_inst motor_control_external_connection CLASS_NAME
+Info: add_instance nyan_mouse_inst_motor_control_external_connection_bfm altera_conduit_bfm 
+Info: get_instance_property nyan_mouse_inst_motor_control_external_connection_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value nyan_mouse_inst motor_control_external_connection associatedClock
+Info: get_instance_interface_parameter_value nyan_mouse_inst motor_control_external_connection associatedReset
+Info: get_instance_interface_ports nyan_mouse_inst motor_control_external_connection
+Info: get_instance_interface_port_property nyan_mouse_inst motor_control_external_connection motor_control_external_connection_export ROLE
+Info: get_instance_interface_port_property nyan_mouse_inst motor_control_external_connection motor_control_external_connection_export WIDTH
+Info: get_instance_interface_port_property nyan_mouse_inst motor_control_external_connection motor_control_external_connection_export DIRECTION
+Info: set_instance_parameter_value nyan_mouse_inst_motor_control_external_connection_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value nyan_mouse_inst_motor_control_external_connection_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value nyan_mouse_inst_motor_control_external_connection_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value nyan_mouse_inst_motor_control_external_connection_bfm SIGNAL_WIDTHS 4
+Info: set_instance_parameter_value nyan_mouse_inst_motor_control_external_connection_bfm SIGNAL_DIRECTIONS input
+Info: get_instance_property nyan_mouse_inst_motor_control_external_connection_bfm CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst motor_control_external_connection CLASS_NAME
+Info: get_instance_interfaces nyan_mouse_inst_motor_control_external_connection_bfm
+Info: get_instance_interface_property nyan_mouse_inst_motor_control_external_connection_bfm conduit CLASS_NAME
+Info: add_connection nyan_mouse_inst_motor_control_external_connection_bfm.conduit nyan_mouse_inst.motor_control_external_connection
+Info: send_message Info TB_Gen: Saving testbench system: nyan_mouse_tb.qsys
+Info: TB_Gen: Saving testbench system: nyan_mouse_tb.qsys
+Info: save_system nyan_mouse_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb.qsys
+Info: Done
+Info: ip-generate --project-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb/simulation/" --file-set=SIM_VERILOG --report-file="html:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb.html" --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE15E22C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb.qsys" --report-file="csv:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse_tb.csv" --report-file="spd:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse_tb.spd"
+Progress: Loading testbench/nyan_mouse_tb.qsys
+Progress: Reading input file
+Progress: Adding nyan_mouse_inst [nyan_mouse 1.0]
+Progress: Parameterizing module nyan_mouse_inst
+Progress: Adding nyan_mouse_inst_clk_bfm [altera_avalon_clock_source 13.1]
+Progress: Parameterizing module nyan_mouse_inst_clk_bfm
+Progress: Adding nyan_mouse_inst_pio_0_external_connection_bfm [altera_conduit_bfm 13.1]
+Progress: Parameterizing module nyan_mouse_inst_pio_0_external_connection_bfm
+Progress: Adding nyan_mouse_inst_uart_0_external_connection_bfm [altera_conduit_bfm 13.1]
+Progress: Parameterizing module nyan_mouse_inst_uart_0_external_connection_bfm
+Progress: Adding nyan_mouse_inst_adc_spi_bfm [altera_conduit_bfm 13.1]
+Progress: Parameterizing module nyan_mouse_inst_adc_spi_bfm
+Progress: Adding nyan_mouse_inst_encoder_in_external_connection_bfm [altera_conduit_bfm 13.1]
+Progress: Parameterizing module nyan_mouse_inst_encoder_in_external_connection_bfm
+Progress: Adding nyan_mouse_inst_motor_control_external_connection_bfm [altera_conduit_bfm 13.1]
+Progress: Parameterizing module nyan_mouse_inst_motor_control_external_connection_bfm
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nyan_mouse_tb.nyan_mouse_inst.magic_GPIO: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse_tb.nyan_mouse_inst.encoder_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse_tb.nyan_mouse_inst_clk_bfm: Elaborate: altera_clock_source
+Info: nyan_mouse_tb.nyan_mouse_inst_clk_bfm:            $Revision: #1 $
+Info: nyan_mouse_tb.nyan_mouse_inst_clk_bfm:            $Date: 2013/08/11 $
+Info: nyan_mouse_tb: Generating nyan_mouse_tb "nyan_mouse_tb" for SIM_VERILOG
+Info: pipeline_bridge_swap_transform: After transform: 7 modules, 6 connections
+Info: No custom instruction connections, skipping transform 
+Info: pipeline_bridge_swap_transform: After transform: 11 modules, 46 connections
+Info: merlin_custom_instruction_transform: After transform: 16 modules, 51 connections
+Info: merlin_initial_interconnect_transform: After transform: 10 modules, 38 connections
+Info: merlin_translator_transform: After transform: 21 modules, 82 connections
+Info: merlin_domain_transform: After transform: 42 modules, 224 connections
+Info: merlin_router_transform: After transform: 53 modules, 268 connections
+Info: merlin_traffic_limiter_transform: After transform: 55 modules, 278 connections
+Info: merlin_network_to_switch_transform: After transform: 76 modules, 333 connections
+Info: limiter_update_transform: After transform: 76 modules, 335 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 78 modules, 412 connections
+Info: merlin_hierarchy_transform: After transform: 17 modules, 54 connections
+Info: merlin_mm_transform: After transform: 17 modules, 54 connections
+Info: merlin_interrupt_mapper_transform: After transform: 18 modules, 58 connections
+Info: reset_adaptation_transform: After transform: 20 modules, 60 connections
+Warning: nyan_mouse_inst: "No matching role found for processor_0_custom_instruction_master_translator:ci_slave:ci_slave_ipending (ipending)"
+Warning: nyan_mouse_inst: "No matching role found for processor_0_custom_instruction_master_translator:ci_slave:ci_slave_estatus (estatus)"
+Warning: nyan_mouse_inst: "No matching role found for processor_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: nyan_mouse_inst: "No matching role found for processor_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning: nyan_mouse_inst: "No matching role found for bt_debug:s1:dataavailable (dataavailable)"
+Warning: nyan_mouse_inst: "No matching role found for bt_debug:s1:readyfordata (readyfordata)"
+Info: nyan_mouse_inst: "nyan_mouse_tb" instantiated nyan_mouse "nyan_mouse_inst"
+Info: nyan_mouse_inst_clk_bfm: "nyan_mouse_tb" instantiated altera_avalon_clock_source "nyan_mouse_inst_clk_bfm"
+Info: nyan_mouse_inst_pio_0_external_connection_bfm: "nyan_mouse_tb" instantiated altera_conduit_bfm "nyan_mouse_inst_pio_0_external_connection_bfm"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb/simulation/submodules/verbosity_pkg.sv
+Info: nyan_mouse_inst_uart_0_external_connection_bfm: "nyan_mouse_tb" instantiated altera_conduit_bfm "nyan_mouse_inst_uart_0_external_connection_bfm"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb/simulation/submodules/verbosity_pkg.sv
+Info: nyan_mouse_inst_adc_spi_bfm: "nyan_mouse_tb" instantiated altera_conduit_bfm "nyan_mouse_inst_adc_spi_bfm"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb/simulation/submodules/verbosity_pkg.sv
+Info: nyan_mouse_inst_encoder_in_external_connection_bfm: "nyan_mouse_tb" instantiated altera_conduit_bfm "nyan_mouse_inst_encoder_in_external_connection_bfm"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb/simulation/submodules/verbosity_pkg.sv
+Info: nyan_mouse_inst_motor_control_external_connection_bfm: "nyan_mouse_tb" instantiated altera_conduit_bfm "nyan_mouse_inst_motor_control_external_connection_bfm"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb/simulation/submodules/verbosity_pkg.sv
+Info: magic_GPIO: Starting RTL generation for module 'nyan_mouse_magic_GPIO'
+Info: magic_GPIO:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nyan_mouse_magic_GPIO --dir=/tmp/alt6186_6868421522501446980.dir/0041_magic_GPIO_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0041_magic_GPIO_gen//nyan_mouse_magic_GPIO_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0041_magic_GPIO_gen/  ]
+Info: magic_GPIO: Done RTL generation for module 'nyan_mouse_magic_GPIO'
+Info: magic_GPIO: "nyan_mouse_inst" instantiated altera_avalon_pio "magic_GPIO"
+Info: processor_0: Starting RTL generation for module 'nyan_mouse_processor_0'
+Info: processor_0:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/eperlcmd -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -- /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=nyan_mouse_processor_0 --dir=/tmp/alt6186_6868421522501446980.dir/0042_processor_0_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0042_processor_0_gen//nyan_mouse_processor_0_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0042_processor_0_gen/  ]
+Info: processor_0: # 2014.04.26 14:50:39 (*) Starting Nios II generation
+Info: processor_0: # 2014.04.26 14:50:39 (*)   Checking for plaintext license.
+Info: processor_0: # 2014.04.26 14:50:41 (*)   Couldn't query license setup in Quartus directory /home/brandon/altera/13.1/quartus
+Info: processor_0: # 2014.04.26 14:50:41 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: processor_0: # 2014.04.26 14:50:41 (*)   LM_LICENSE_FILE environment variable is empty
+Info: processor_0: # 2014.04.26 14:50:41 (*)   Plaintext license not found.
+Info: processor_0: # 2014.04.26 14:50:41 (*)   Checking for encrypted license (non-evaluation).
+Info: processor_0: # 2014.04.26 14:50:43 (*)   Couldn't query license setup in Quartus directory /home/brandon/altera/13.1/quartus
+Info: processor_0: # 2014.04.26 14:50:43 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: processor_0: # 2014.04.26 14:50:43 (*)   LM_LICENSE_FILE environment variable is empty
+Info: processor_0: # 2014.04.26 14:50:43 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: processor_0: # 2014.04.26 14:50:43 (*)   Elaborating CPU configuration settings
+Info: processor_0: # 2014.04.26 14:50:44 (*)   Creating all objects for CPU
+Info: processor_0: # 2014.04.26 14:50:44 (*)     Testbench
+Info: processor_0: # 2014.04.26 14:50:44 (*)     Instruction decoding
+Info: processor_0: # 2014.04.26 14:50:44 (*)       Instruction fields
+Info: processor_0: # 2014.04.26 14:50:44 (*)       Instruction decodes
+Info: processor_0: # 2014.04.26 14:50:45 (*)       Signals for RTL simulation waveforms
+Info: processor_0: # 2014.04.26 14:50:45 (*)       Instruction controls
+Info: processor_0: # 2014.04.26 14:50:45 (*)     Pipeline frontend
+Info: processor_0: # 2014.04.26 14:50:45 (*)     Pipeline backend
+Info: processor_0: # 2014.04.26 14:50:49 (*)   Creating '/tmp/alt6186_6868421522501446980.dir/0042_processor_0_gen//nyan_mouse_processor_0_nios2_waves.do'
+Info: processor_0: # 2014.04.26 14:50:49 (*)   Generating RTL from CPU objects
+Info: processor_0: # 2014.04.26 14:50:54 (*)   Creating encrypted RTL
+Info: processor_0: # 2014.04.26 14:50:56 (*)   Creating IP functional simulation model
+Info: processor_0: # 2014.04.26 14:51:12 (*) Done Nios II generation
+Info: processor_0: Done RTL generation for module 'nyan_mouse_processor_0'
+Info: processor_0: "nyan_mouse_inst" instantiated altera_nios2_qsys "processor_0"
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: nios_custom_instr_floating_point_2_0: "nyan_mouse_inst" instantiated altera_nios_custom_instr_floating_point_2 "nios_custom_instr_floating_point_2_0"
+Info: performance_counter_0: Starting RTL generation for module 'nyan_mouse_performance_counter_0'
+Info: performance_counter_0:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_performance_counter -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_performance_counter/generate_rtl.pl --name=nyan_mouse_performance_counter_0 --dir=/tmp/alt6186_6868421522501446980.dir/0043_performance_counter_0_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0043_performance_counter_0_gen//nyan_mouse_performance_counter_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0043_performance_counter_0_gen/  ]
+Info: performance_counter_0: Done RTL generation for module 'nyan_mouse_performance_counter_0'
+Info: performance_counter_0: "nyan_mouse_inst" instantiated altera_avalon_performance_counter "performance_counter_0"
+Info: systick: Starting RTL generation for module 'nyan_mouse_systick'
+Info: systick:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux//perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux//perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=nyan_mouse_systick --dir=/tmp/alt6186_6868421522501446980.dir/0044_systick_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0044_systick_gen//nyan_mouse_systick_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0044_systick_gen/  ]
+Info: systick: Done RTL generation for module 'nyan_mouse_systick'
+Info: systick: "nyan_mouse_inst" instantiated altera_avalon_timer "systick"
+Info: bt_debug: Starting RTL generation for module 'nyan_mouse_bt_debug'
+Info: bt_debug:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=nyan_mouse_bt_debug --dir=/tmp/alt6186_6868421522501446980.dir/0045_bt_debug_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0045_bt_debug_gen//nyan_mouse_bt_debug_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0045_bt_debug_gen/  ]
+Info: bt_debug: Done RTL generation for module 'nyan_mouse_bt_debug'
+Info: bt_debug: "nyan_mouse_inst" instantiated altera_avalon_uart "bt_debug"
+Info: memory_0: Starting RTL generation for module 'nyan_mouse_memory_0'
+Info: memory_0:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nyan_mouse_memory_0 --dir=/tmp/alt6186_6868421522501446980.dir/0046_memory_0_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0046_memory_0_gen//nyan_mouse_memory_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0046_memory_0_gen/  ]
+Info: memory_0: Done RTL generation for module 'nyan_mouse_memory_0'
+Info: memory_0: "nyan_mouse_inst" instantiated altera_avalon_onchip_memory2 "memory_0"
+Info: adc_interface: Starting RTL generation for module 'nyan_mouse_adc_interface'
+Info: adc_interface:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=nyan_mouse_adc_interface --dir=/tmp/alt6186_6868421522501446980.dir/0047_adc_interface_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0047_adc_interface_gen//nyan_mouse_adc_interface_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0047_adc_interface_gen/  ]
+Info: adc_interface: Done RTL generation for module 'nyan_mouse_adc_interface'
+Info: adc_interface: "nyan_mouse_inst" instantiated altera_avalon_spi "adc_interface"
+Info: encoder_in: Starting RTL generation for module 'nyan_mouse_encoder_in'
+Info: encoder_in:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nyan_mouse_encoder_in --dir=/tmp/alt6186_6868421522501446980.dir/0048_encoder_in_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0048_encoder_in_gen//nyan_mouse_encoder_in_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0048_encoder_in_gen/  ]
+Info: encoder_in: Done RTL generation for module 'nyan_mouse_encoder_in'
+Info: encoder_in: "nyan_mouse_inst" instantiated altera_avalon_pio "encoder_in"
+Info: motor_control: Starting RTL generation for module 'nyan_mouse_motor_control'
+Info: motor_control:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nyan_mouse_motor_control --dir=/tmp/alt6186_6868421522501446980.dir/0049_motor_control_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0049_motor_control_gen//nyan_mouse_motor_control_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6186_6868421522501446980.dir/0049_motor_control_gen/  ]
+Info: motor_control: Done RTL generation for module 'nyan_mouse_motor_control'
+Info: motor_control: "nyan_mouse_inst" instantiated altera_avalon_pio "motor_control"
+Info: processor_0_custom_instruction_master_translator: "nyan_mouse_inst" instantiated altera_customins_master_translator "processor_0_custom_instruction_master_translator"
+Info: processor_0_custom_instruction_master_comb_xconnect: "nyan_mouse_inst" instantiated altera_customins_xconnect "processor_0_custom_instruction_master_comb_xconnect"
+Info: processor_0_custom_instruction_master_comb_slave_translator0: "nyan_mouse_inst" instantiated altera_customins_slave_translator "processor_0_custom_instruction_master_comb_slave_translator0"
+Info: processor_0_custom_instruction_master_multi_xconnect: "nyan_mouse_inst" instantiated altera_customins_xconnect "processor_0_custom_instruction_master_multi_xconnect"
+Info: pipeline_bridge_swap_transform: After transform: 68 modules, 232 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: mm_interconnect_0: "nyan_mouse_inst" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_0"
+Info: irq_mapper: "nyan_mouse_inst" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "nyan_mouse_inst" instantiated altera_reset_controller "rst_controller"
+Info: fpci_combi: "nios_custom_instr_floating_point_2_0" instantiated altera_nios_custom_instr_floating_point_2_combi "fpci_combi"
+Info: fpci_multi: "nios_custom_instr_floating_point_2_0" instantiated altera_nios_custom_instr_floating_point_2_multi "fpci_multi"
+Info: processor_0_instruction_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "processor_0_instruction_master_translator"
+Info: processor_0_jtag_debug_module_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "processor_0_jtag_debug_module_translator"
+Info: processor_0_instruction_master_translator_avalon_universal_master_0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "processor_0_instruction_master_translator_avalon_universal_master_0_agent"
+Info: processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info: processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "mm_interconnect_0" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "mm_interconnect_0" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "mm_interconnect_0" instantiated altera_merlin_router "id_router"
+Info: id_router_002: "mm_interconnect_0" instantiated altera_merlin_router "id_router_002"
+Info: limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "limiter"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb/simulation/submodules/altera_avalon_sc_fifo.v
+Info: cmd_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: cmd_xbar_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux_002"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_002"
+Info: rsp_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: nyan_mouse_tb: Done "nyan_mouse_tb" with 45 modules, 97 files, 2504304 bytes
+Info: ip-generate succeeded.
+Info: sim-script-gen --spd="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse_tb.spd" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/"
+Info: Doing: ip-make-simscript --spd=/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse_tb.spd --output-directory=/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/
+Info: Generating the following file(s) for MODELSIM simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	45 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create testbench Qsys system
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/" --report-file="bsf:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.bsf" --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE15E22C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.qsys"
+Progress: Loading FPGA/nyan_mouse.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding magic_GPIO [altera_avalon_pio 13.1]
+Progress: Parameterizing module magic_GPIO
+Progress: Adding processor_0 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module processor_0
+Progress: Adding nios_custom_instr_floating_point_2_0 [altera_nios_custom_instr_floating_point_2 100.99.98.97]
+Progress: Parameterizing module nios_custom_instr_floating_point_2_0
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 13.1]
+Progress: Parameterizing module performance_counter_0
+Progress: Adding systick [altera_avalon_timer 13.1]
+Progress: Parameterizing module systick
+Progress: Adding bt_debug [altera_avalon_uart 13.1]
+Progress: Parameterizing module bt_debug
+Progress: Adding memory_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module memory_0
+Progress: Adding adc_interface [altera_avalon_spi 13.1]
+Progress: Parameterizing module adc_interface
+Progress: Adding encoder_in [altera_avalon_pio 13.1]
+Progress: Parameterizing module encoder_in
+Progress: Adding motor_control [altera_avalon_pio 13.1]
+Progress: Parameterizing module motor_control
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nyan_mouse.magic_GPIO: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse.encoder_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/" --file-set=QUARTUS_SYNTH --report-file="html:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.html" --report-file="sopcinfo:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.sopcinfo" --report-file="cmp:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.cmp" --report-file="qip:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/nyan_mouse.qip" --report-file=svd --report-file="regmap:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/nyan_mouse.regmap" --report-file="debuginfo:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/nyan_mouse.debuginfo" --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE15E22C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.qsys" --language=VERILOG
+Progress: Loading FPGA/nyan_mouse.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding magic_GPIO [altera_avalon_pio 13.1]
+Progress: Parameterizing module magic_GPIO
+Progress: Adding processor_0 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module processor_0
+Progress: Adding nios_custom_instr_floating_point_2_0 [altera_nios_custom_instr_floating_point_2 100.99.98.97]
+Progress: Parameterizing module nios_custom_instr_floating_point_2_0
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 13.1]
+Progress: Parameterizing module performance_counter_0
+Progress: Adding systick [altera_avalon_timer 13.1]
+Progress: Parameterizing module systick
+Progress: Adding bt_debug [altera_avalon_uart 13.1]
+Progress: Parameterizing module bt_debug
+Progress: Adding memory_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module memory_0
+Progress: Adding adc_interface [altera_avalon_spi 13.1]
+Progress: Parameterizing module adc_interface
+Progress: Adding encoder_in [altera_avalon_pio 13.1]
+Progress: Parameterizing module encoder_in
+Progress: Adding motor_control [altera_avalon_pio 13.1]
+Progress: Parameterizing module motor_control
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nyan_mouse.magic_GPIO: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse.encoder_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse: Generating nyan_mouse "nyan_mouse" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 11 modules, 46 connections
+Info: merlin_custom_instruction_transform: After transform: 16 modules, 51 connections
+Info: merlin_initial_interconnect_transform: After transform: 10 modules, 38 connections
+Info: merlin_translator_transform: After transform: 21 modules, 82 connections
+Info: merlin_domain_transform: After transform: 42 modules, 224 connections
+Info: merlin_router_transform: After transform: 53 modules, 268 connections
+Info: merlin_traffic_limiter_transform: After transform: 55 modules, 278 connections
+Info: merlin_network_to_switch_transform: After transform: 76 modules, 333 connections
+Info: limiter_update_transform: After transform: 76 modules, 335 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 78 modules, 412 connections
+Info: merlin_hierarchy_transform: After transform: 17 modules, 54 connections
+Info: merlin_mm_transform: After transform: 17 modules, 54 connections
+Info: merlin_interrupt_mapper_transform: After transform: 18 modules, 58 connections
+Info: reset_adaptation_transform: After transform: 20 modules, 60 connections
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_translator:ci_slave:ci_slave_ipending (ipending)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_translator:ci_slave:ci_slave_estatus (estatus)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning: nyan_mouse: "No matching role found for bt_debug:s1:dataavailable (dataavailable)"
+Warning: nyan_mouse: "No matching role found for bt_debug:s1:readyfordata (readyfordata)"
+Info: magic_GPIO: Starting RTL generation for module 'nyan_mouse_magic_GPIO'
+Info: magic_GPIO:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nyan_mouse_magic_GPIO --dir=/tmp/alt6186_6868421522501446980.dir/0074_magic_GPIO_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0074_magic_GPIO_gen//nyan_mouse_magic_GPIO_component_configuration.pl  --do_build_sim=0  ]
+Info: magic_GPIO: Done RTL generation for module 'nyan_mouse_magic_GPIO'
+Info: magic_GPIO: "nyan_mouse" instantiated altera_avalon_pio "magic_GPIO"
+Info: processor_0: Starting RTL generation for module 'nyan_mouse_processor_0'
+Info: processor_0:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/eperlcmd -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -I /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -- /home/brandon/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=nyan_mouse_processor_0 --dir=/tmp/alt6186_6868421522501446980.dir/0075_processor_0_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0075_processor_0_gen//nyan_mouse_processor_0_processor_configuration.pl  --do_build_sim=0  ]
+Info: processor_0: # 2014.04.26 14:51:30 (*) Starting Nios II generation
+Info: processor_0: # 2014.04.26 14:51:30 (*)   Checking for plaintext license.
+Info: processor_0: # 2014.04.26 14:51:32 (*)   Couldn't query license setup in Quartus directory /home/brandon/altera/13.1/quartus
+Info: processor_0: # 2014.04.26 14:51:32 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: processor_0: # 2014.04.26 14:51:32 (*)   LM_LICENSE_FILE environment variable is empty
+Info: processor_0: # 2014.04.26 14:51:32 (*)   Plaintext license not found.
+Info: processor_0: # 2014.04.26 14:51:32 (*)   Checking for encrypted license (non-evaluation).
+Info: processor_0: # 2014.04.26 14:51:34 (*)   Couldn't query license setup in Quartus directory /home/brandon/altera/13.1/quartus
+Info: processor_0: # 2014.04.26 14:51:34 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: processor_0: # 2014.04.26 14:51:34 (*)   LM_LICENSE_FILE environment variable is empty
+Info: processor_0: # 2014.04.26 14:51:34 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: processor_0: # 2014.04.26 14:51:34 (*)   Elaborating CPU configuration settings
+Info: processor_0: # 2014.04.26 14:51:34 (*)   Creating all objects for CPU
+Info: processor_0: # 2014.04.26 14:51:34 (*)     Testbench
+Info: processor_0: # 2014.04.26 14:51:35 (*)     Instruction decoding
+Info: processor_0: # 2014.04.26 14:51:35 (*)       Instruction fields
+Info: processor_0: # 2014.04.26 14:51:35 (*)       Instruction decodes
+Info: processor_0: # 2014.04.26 14:51:36 (*)       Signals for RTL simulation waveforms
+Info: processor_0: # 2014.04.26 14:51:36 (*)       Instruction controls
+Info: processor_0: # 2014.04.26 14:51:36 (*)     Pipeline frontend
+Info: processor_0: # 2014.04.26 14:51:36 (*)     Pipeline backend
+Info: processor_0: # 2014.04.26 14:51:40 (*)   Generating RTL from CPU objects
+Info: processor_0: # 2014.04.26 14:51:45 (*)   Creating encrypted RTL
+Info: processor_0: # 2014.04.26 14:51:47 (*) Done Nios II generation
+Info: processor_0: Done RTL generation for module 'nyan_mouse_processor_0'
+Info: processor_0: "nyan_mouse" instantiated altera_nios2_qsys "processor_0"
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: nios_custom_instr_floating_point_2_0: "nyan_mouse" instantiated altera_nios_custom_instr_floating_point_2 "nios_custom_instr_floating_point_2_0"
+Info: performance_counter_0: Starting RTL generation for module 'nyan_mouse_performance_counter_0'
+Info: performance_counter_0:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_performance_counter -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_performance_counter/generate_rtl.pl --name=nyan_mouse_performance_counter_0 --dir=/tmp/alt6186_6868421522501446980.dir/0076_performance_counter_0_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0076_performance_counter_0_gen//nyan_mouse_performance_counter_0_component_configuration.pl  --do_build_sim=0  ]
+Info: performance_counter_0: Done RTL generation for module 'nyan_mouse_performance_counter_0'
+Info: performance_counter_0: "nyan_mouse" instantiated altera_avalon_performance_counter "performance_counter_0"
+Info: systick: Starting RTL generation for module 'nyan_mouse_systick'
+Info: systick:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux//perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux//perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=nyan_mouse_systick --dir=/tmp/alt6186_6868421522501446980.dir/0077_systick_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0077_systick_gen//nyan_mouse_systick_component_configuration.pl  --do_build_sim=0  ]
+Info: systick: Done RTL generation for module 'nyan_mouse_systick'
+Info: systick: "nyan_mouse" instantiated altera_avalon_timer "systick"
+Info: bt_debug: Starting RTL generation for module 'nyan_mouse_bt_debug'
+Info: bt_debug:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=nyan_mouse_bt_debug --dir=/tmp/alt6186_6868421522501446980.dir/0078_bt_debug_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0078_bt_debug_gen//nyan_mouse_bt_debug_component_configuration.pl  --do_build_sim=0  ]
+Info: bt_debug: Done RTL generation for module 'nyan_mouse_bt_debug'
+Info: bt_debug: "nyan_mouse" instantiated altera_avalon_uart "bt_debug"
+Info: memory_0: Starting RTL generation for module 'nyan_mouse_memory_0'
+Info: memory_0:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nyan_mouse_memory_0 --dir=/tmp/alt6186_6868421522501446980.dir/0079_memory_0_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0079_memory_0_gen//nyan_mouse_memory_0_component_configuration.pl  --do_build_sim=0  ]
+Info: memory_0: Done RTL generation for module 'nyan_mouse_memory_0'
+Info: memory_0: "nyan_mouse" instantiated altera_avalon_onchip_memory2 "memory_0"
+Info: adc_interface: Starting RTL generation for module 'nyan_mouse_adc_interface'
+Info: adc_interface:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=nyan_mouse_adc_interface --dir=/tmp/alt6186_6868421522501446980.dir/0080_adc_interface_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0080_adc_interface_gen//nyan_mouse_adc_interface_component_configuration.pl  --do_build_sim=0  ]
+Info: adc_interface: Done RTL generation for module 'nyan_mouse_adc_interface'
+Info: adc_interface: "nyan_mouse" instantiated altera_avalon_spi "adc_interface"
+Info: encoder_in: Starting RTL generation for module 'nyan_mouse_encoder_in'
+Info: encoder_in:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nyan_mouse_encoder_in --dir=/tmp/alt6186_6868421522501446980.dir/0081_encoder_in_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0081_encoder_in_gen//nyan_mouse_encoder_in_component_configuration.pl  --do_build_sim=0  ]
+Info: encoder_in: Done RTL generation for module 'nyan_mouse_encoder_in'
+Info: encoder_in: "nyan_mouse" instantiated altera_avalon_pio "encoder_in"
+Info: motor_control: Starting RTL generation for module 'nyan_mouse_motor_control'
+Info: motor_control:   Generation command is [exec /home/brandon/altera/13.1/quartus/linux/perl/bin/perl -I /home/brandon/altera/13.1/quartus/linux/perl/lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/europa -I /home/brandon/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /home/brandon/altera/13.1/quartus/sopc_builder/bin -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/brandon/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nyan_mouse_motor_control --dir=/tmp/alt6186_6868421522501446980.dir/0082_motor_control_gen/ --quartus_dir=/home/brandon/altera/13.1/quartus --verilog --config=/tmp/alt6186_6868421522501446980.dir/0082_motor_control_gen//nyan_mouse_motor_control_component_configuration.pl  --do_build_sim=0  ]
+Info: motor_control: Done RTL generation for module 'nyan_mouse_motor_control'
+Info: motor_control: "nyan_mouse" instantiated altera_avalon_pio "motor_control"
+Info: processor_0_custom_instruction_master_translator: "nyan_mouse" instantiated altera_customins_master_translator "processor_0_custom_instruction_master_translator"
+Info: processor_0_custom_instruction_master_comb_xconnect: "nyan_mouse" instantiated altera_customins_xconnect "processor_0_custom_instruction_master_comb_xconnect"
+Info: processor_0_custom_instruction_master_comb_slave_translator0: "nyan_mouse" instantiated altera_customins_slave_translator "processor_0_custom_instruction_master_comb_slave_translator0"
+Info: processor_0_custom_instruction_master_multi_xconnect: "nyan_mouse" instantiated altera_customins_xconnect "processor_0_custom_instruction_master_multi_xconnect"
+Info: pipeline_bridge_swap_transform: After transform: 68 modules, 232 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 68 modules, 232 connections
+Info: mm_interconnect_0: "nyan_mouse" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_0"
+Info: irq_mapper: "nyan_mouse" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "nyan_mouse" instantiated altera_reset_controller "rst_controller"
+Info: fpci_combi: "nios_custom_instr_floating_point_2_0" instantiated altera_nios_custom_instr_floating_point_2_combi "fpci_combi"
+Info: fpci_multi: "nios_custom_instr_floating_point_2_0" instantiated altera_nios_custom_instr_floating_point_2_multi "fpci_multi"
+Info: processor_0_instruction_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "processor_0_instruction_master_translator"
+Info: processor_0_jtag_debug_module_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "processor_0_jtag_debug_module_translator"
+Info: processor_0_instruction_master_translator_avalon_universal_master_0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "processor_0_instruction_master_translator_avalon_universal_master_0_agent"
+Info: processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info: processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "processor_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "mm_interconnect_0" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "mm_interconnect_0" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "mm_interconnect_0" instantiated altera_merlin_router "id_router"
+Info: id_router_002: "mm_interconnect_0" instantiated altera_merlin_router "id_router_002"
+Info: limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "limiter"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: cmd_xbar_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux_002"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_002"
+Info: rsp_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: nyan_mouse: Done "nyan_mouse" with 38 modules, 76 files, 2266447 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
