@@ -1,0 +1,417 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/" --file-set=SIM_VERILOG --report-file="html:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.html" --report-file="sopcinfo:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.sopcinfo" --report-file="csv:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.csv" --report-file="spd:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.spd" --report-file="sip:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/nyan_mouse.sip" --report-file="cmp:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.cmp" --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE15E22C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.qsys"
+Progress: Loading FPGA/nyan_mouse.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding magic_GPIO [altera_avalon_pio 13.1]
+Progress: Parameterizing module magic_GPIO
+Progress: Adding processor_0 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module processor_0
+Progress: Adding nios_custom_instr_floating_point_2_0 [altera_nios_custom_instr_floating_point_2 100.99.98.97]
+Progress: Parameterizing module nios_custom_instr_floating_point_2_0
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 13.1]
+Progress: Parameterizing module performance_counter_0
+Progress: Adding systick [altera_avalon_timer 13.1]
+Progress: Parameterizing module systick
+Progress: Adding bt_debug [altera_avalon_uart 13.1]
+Progress: Parameterizing module bt_debug
+Progress: Adding memory_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module memory_0
+Progress: Adding adc_interface [altera_avalon_spi 13.1]
+Progress: Parameterizing module adc_interface
+Progress: Adding encoder_in [altera_avalon_pio 13.1]
+Progress: Parameterizing module encoder_in
+Progress: Adding motor_control [altera_avalon_pio 13.1]
+Progress: Parameterizing module motor_control
+Progress: Adding dac_clock [altpll 13.1]
+Progress: Parameterizing module dac_clock
+Progress: Adding dac_L [altera_avalon_pio 13.1]
+Progress: Parameterizing module dac_L
+Progress: Adding dac_R [altera_avalon_pio 13.1]
+Progress: Parameterizing module dac_R
+Progress: Adding i2c_master_0 [i2c_master 1.0]
+Progress: Parameterizing module i2c_master_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nyan_mouse.magic_GPIO: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse.encoder_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: nyan_mouse.i2c_master_0.avalon_slave_0: Signal chipselect appears 2 times (only once is allowed)
+Warning: nyan_mouse.dac_clock: dac_clock.areset_conduit must be exported, or connected to a matching conduit.
+Warning: nyan_mouse.dac_clock: dac_clock.locked_conduit must be exported, or connected to a matching conduit.
+Warning: nyan_mouse.dac_clock: dac_clock.phasedone_conduit must be exported, or connected to a matching conduit.
+Info: nyan_mouse: Generating nyan_mouse "nyan_mouse" for SIM_VERILOG
+Info: pipeline_bridge_swap_transform: After transform: 15 modules, 65 connections
+Info: merlin_custom_instruction_transform: After transform: 20 modules, 70 connections
+Info: merlin_initial_interconnect_transform: After transform: 14 modules, 54 connections
+Warning: Translator i2c_master_0_avalon_slave_0_translator failed to match interface i2c_master_0.avalon_slave_0
+Info: merlin_translator_transform: After transform: 29 modules, 114 connections
+Info: merlin_domain_transform: After transform: 62 modules, 335 connections
+Info: merlin_router_transform: After transform: 79 modules, 403 connections
+Info: merlin_traffic_limiter_transform: After transform: 81 modules, 413 connections
+Info: merlin_burst_transform: After transform: 82 modules, 417 connections
+Info: merlin_network_to_switch_transform: After transform: 114 modules, 500 connections
+Info: merlin_width_transform: After transform: 116 modules, 508 connections
+Info: limiter_update_transform: After transform: 116 modules, 510 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 119 modules, 628 connections
+Info: merlin_hierarchy_transform: After transform: 21 modules, 75 connections
+Info: merlin_mm_transform: After transform: 21 modules, 75 connections
+Info: merlin_interrupt_mapper_transform: After transform: 22 modules, 79 connections
+Warning: i2c_master_0.interrupt_sender: Cannot connect reset for irq_synchronizer.receiver
+Info: merlin_interrupt_sync_transform: After transform: 23 modules, 84 connections
+Info: reset_adaptation_transform: After transform: 26 modules, 87 connections
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_translator:ci_slave:ci_slave_ipending (ipending)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_translator:ci_slave:ci_slave_estatus (estatus)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning: nyan_mouse: "No matching role found for bt_debug:s1:dataavailable (dataavailable)"
+Warning: nyan_mouse: "No matching role found for bt_debug:s1:readyfordata (readyfordata)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_burstcount (burstcount)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_lock (lock)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_read (read)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_readdatavalid (readdatavalid)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_debugaccess (debugaccess)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_byteenable (byteenable)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: Generation stopped, 24 or more modules remaining
+Info: nyan_mouse: Done "nyan_mouse" with 22 modules, 1 files, 115114 bytes
+Error: ip-generate failed with exit code 1: 13 Errors, 18 Warnings
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.spd" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/"
+Info: Doing: ip-make-simscript --spd=/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.spd --output-directory=/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: Generating the following file(s) for RIVIERA simulator in /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: 
+Info: Starting: Create testbench Qsys system
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse.ipx
+Info: ip-generate --project-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/" --report-file="sopcinfo:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.sopcinfo" --report-file="html:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.html" --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE15E22C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.qsys"
+Progress: Loading FPGA/nyan_mouse.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding magic_GPIO [altera_avalon_pio 13.1]
+Progress: Parameterizing module magic_GPIO
+Progress: Adding processor_0 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module processor_0
+Progress: Adding nios_custom_instr_floating_point_2_0 [altera_nios_custom_instr_floating_point_2 100.99.98.97]
+Progress: Parameterizing module nios_custom_instr_floating_point_2_0
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 13.1]
+Progress: Parameterizing module performance_counter_0
+Progress: Adding systick [altera_avalon_timer 13.1]
+Progress: Parameterizing module systick
+Progress: Adding bt_debug [altera_avalon_uart 13.1]
+Progress: Parameterizing module bt_debug
+Progress: Adding memory_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module memory_0
+Progress: Adding adc_interface [altera_avalon_spi 13.1]
+Progress: Parameterizing module adc_interface
+Progress: Adding encoder_in [altera_avalon_pio 13.1]
+Progress: Parameterizing module encoder_in
+Progress: Adding motor_control [altera_avalon_pio 13.1]
+Progress: Parameterizing module motor_control
+Progress: Adding dac_clock [altpll 13.1]
+Progress: Parameterizing module dac_clock
+Progress: Adding dac_L [altera_avalon_pio 13.1]
+Progress: Parameterizing module dac_L
+Progress: Adding dac_R [altera_avalon_pio 13.1]
+Progress: Parameterizing module dac_R
+Progress: Adding i2c_master_0 [i2c_master 1.0]
+Progress: Parameterizing module i2c_master_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nyan_mouse.magic_GPIO: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse.encoder_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: nyan_mouse.i2c_master_0.avalon_slave_0: Signal chipselect appears 2 times (only once is allowed)
+Warning: nyan_mouse.dac_clock: dac_clock.areset_conduit must be exported, or connected to a matching conduit.
+Warning: nyan_mouse.dac_clock: dac_clock.locked_conduit must be exported, or connected to a matching conduit.
+Warning: nyan_mouse.dac_clock: dac_clock.phasedone_conduit must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Loading component library for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (1) searching /home/brandon/altera/13.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index /home/brandon/altera/13.1/quartus/sopc_builder/bin/root_components.ipx
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/root_components.ipx: Loading now from components.ipx
+Info: Reading index /home/brandon/altera/13.1/quartus/sopc_builder/bin/ip_component_categories.ipx
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.01 seconds
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.01 seconds
+Info: Reading index /home/brandon/altera/13.1/ip/altera/altera_components.ipx
+Info: /home/brandon/altera/13.1/ip/altera/altera_components.ipx described 870 plugins, 0 paths, in 0.19 seconds
+Info: /home/brandon/altera/13.1/ip/**/* matched 97 files in 0.24 seconds
+Info: /home/brandon/.altera.quartus/ip/13.1/**/* matched 0 files in 0.01 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/ip/**/* matched 0 files in 0.00 seconds
+Progress: Loading testbench/nyan_mouse_tb.qsys
+Info: Reading index /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse.ipx
+Progress: Loading FPGA/i2c_master_hw.tcl
+Progress: Loading FPGA/nyan_mouse.qsys
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/* matched 20 files in 0.11 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/ip/**/* matched 0 files in 0.00 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/*/* matched 15 files in 0.02 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/nyan_mouse.ipx described 0 plugins, 3 paths, in 0.13 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/* matched 8 files in 0.15 seconds
+Info: /home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/testbench/*/* matched 8 files in 0.00 seconds
+Info: Reading index /home/brandon/altera/13.1/quartus/sopc_builder/builtin.ipx
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/builtin.ipx described 97 plugins, 0 paths, in 0.03 seconds
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/**/* matched 9 files in 0.09 seconds
+Info: Reading index /home/brandon/altera/13.1/quartus/common/librarian/factories/index.ipx
+Info: /home/brandon/altera/13.1/quartus/common/librarian/factories/index.ipx described 151 plugins, 0 paths, in 0.05 seconds
+Info: /home/brandon/altera/13.1/quartus/common/librarian/factories/**/* matched 4 files in 0.05 seconds
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 9 paths, in 0.55 seconds
+Info: /home/brandon/altera/13.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.55 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Loading presets
+Progress: Loading presets
+Info: Running script /home/brandon/altera/13.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: acds::register_package_version 12.1
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: nyan_mouse
+Info: TB_Gen: System design is: nyan_mouse
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property pio_0_external_connection EXPORT_OF
+Info: get_instance_property magic_GPIO CLASS_NAME
+Info: get_instance_assignment magic_GPIO testbench.partner.map.external_connection
+Info: get_interface_property uart_0_external_connection EXPORT_OF
+Info: get_instance_property bt_debug CLASS_NAME
+Info: get_instance_assignment bt_debug testbench.partner.map.external_connection
+Info: get_interface_property adc_spi EXPORT_OF
+Info: get_instance_property adc_interface CLASS_NAME
+Info: get_instance_assignment adc_interface testbench.partner.map.external
+Info: get_interface_property encoder_in_external_connection EXPORT_OF
+Info: get_instance_property encoder_in CLASS_NAME
+Info: get_instance_assignment encoder_in testbench.partner.map.external_connection
+Info: get_interface_property motor_control_external_connection EXPORT_OF
+Info: get_instance_property motor_control CLASS_NAME
+Info: get_instance_assignment motor_control testbench.partner.map.external_connection
+Info: get_interface_property dac_master_clk EXPORT_OF
+Info: get_instance_property dac_clock CLASS_NAME
+Info: get_instance_assignment dac_clock testbench.partner.map.c0
+Info: get_interface_property dac_i2s_clk EXPORT_OF
+Info: get_instance_property dac_clock CLASS_NAME
+Info: get_instance_assignment dac_clock testbench.partner.map.c1
+Info: get_interface_property magic_gpio_clk EXPORT_OF
+Info: get_instance_property dac_clock CLASS_NAME
+Info: get_instance_assignment dac_clock testbench.partner.map.c2
+Info: get_interface_property dac_l_external_connection EXPORT_OF
+Info: get_instance_property dac_L CLASS_NAME
+Info: get_instance_assignment dac_L testbench.partner.map.external_connection
+Info: get_interface_property dac_r_external_connection EXPORT_OF
+Info: get_instance_property dac_R CLASS_NAME
+Info: get_instance_assignment dac_R testbench.partner.map.external_connection
+Info: get_interface_property i2c_master_0_conduit_end EXPORT_OF
+Info: get_instance_property i2c_master_0 CLASS_NAME
+Info: get_instance_assignment i2c_master_0 testbench.partner.map.conduit_end
+Info: get_interface_property i2c_master_0_conduit_end_1 EXPORT_OF
+Info: get_instance_property i2c_master_0 CLASS_NAME
+Info: get_instance_assignment i2c_master_0 testbench.partner.map.conduit_end_1
+Info: get_interface_property i2c_master_0_conduit_end_2 EXPORT_OF
+Info: get_instance_property i2c_master_0 CLASS_NAME
+Info: get_instance_assignment i2c_master_0 testbench.partner.map.conduit_end_2
+Info: get_interface_property i2c_master_0_conduit_end_3 EXPORT_OF
+Info: get_instance_property i2c_master_0 CLASS_NAME
+Info: get_instance_assignment i2c_master_0 testbench.partner.map.conduit_end_3
+Info: get_interface_property i2c_master_0_conduit_end_4 EXPORT_OF
+Info: get_instance_property i2c_master_0 CLASS_NAME
+Info: get_instance_assignment i2c_master_0 testbench.partner.map.conduit_end_4
+Info: get_interface_property i2c_master_0_conduit_end_5 EXPORT_OF
+Info: get_instance_property i2c_master_0 CLASS_NAME
+Info: get_instance_assignment i2c_master_0 testbench.partner.map.conduit_end_5
+Info: send_message Info TB_Gen: Creating testbench system : nyan_mouse_tb with all standard BFMs
+Info: TB_Gen: Creating testbench system : nyan_mouse_tb with all standard BFMs
+Info: create_system nyan_mouse_tb
+Info: add_instance nyan_mouse_inst nyan_mouse 
+Info: set_use_testbench_naming_pattern true
+Info: get_instance_interfaces nyan_mouse_inst
+Info: get_instance_interface_property nyan_mouse_inst clk CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst pio_0_external_connection CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst uart_0_external_connection CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst adc_spi CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst encoder_in_external_connection CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst motor_control_external_connection CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst dac_master_clk CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst dac_i2s_clk CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst magic_gpio_clk CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst dac_l_external_connection CLASS_NAME
+Info: get_instance_interface_property nyan_mouse_inst dac_r_external_connection CLASS_NAME
+Info: send_message Error TB_Gen: Design has 17 but instance has 11 exported interface
+Error: TB_Gen: Design has 17 but instance has 11 exported interface
+Error: Error: TB_Gen: Design has 17 but instance has 11 exported interface
+Info: Done
+Error: There were errors creating the testbench system.
+Info: Finished: Create testbench Qsys system
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/" --report-file="bsf:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.bsf" --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE15E22C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.qsys"
+Progress: Loading FPGA/nyan_mouse.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding magic_GPIO [altera_avalon_pio 13.1]
+Progress: Parameterizing module magic_GPIO
+Progress: Adding processor_0 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module processor_0
+Progress: Adding nios_custom_instr_floating_point_2_0 [altera_nios_custom_instr_floating_point_2 100.99.98.97]
+Progress: Parameterizing module nios_custom_instr_floating_point_2_0
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 13.1]
+Progress: Parameterizing module performance_counter_0
+Progress: Adding systick [altera_avalon_timer 13.1]
+Progress: Parameterizing module systick
+Progress: Adding bt_debug [altera_avalon_uart 13.1]
+Progress: Parameterizing module bt_debug
+Progress: Adding memory_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module memory_0
+Progress: Adding adc_interface [altera_avalon_spi 13.1]
+Progress: Parameterizing module adc_interface
+Progress: Adding encoder_in [altera_avalon_pio 13.1]
+Progress: Parameterizing module encoder_in
+Progress: Adding motor_control [altera_avalon_pio 13.1]
+Progress: Parameterizing module motor_control
+Progress: Adding dac_clock [altpll 13.1]
+Progress: Parameterizing module dac_clock
+Progress: Adding dac_L [altera_avalon_pio 13.1]
+Progress: Parameterizing module dac_L
+Progress: Adding dac_R [altera_avalon_pio 13.1]
+Progress: Parameterizing module dac_R
+Progress: Adding i2c_master_0 [i2c_master 1.0]
+Progress: Parameterizing module i2c_master_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nyan_mouse.magic_GPIO: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse.encoder_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: nyan_mouse.i2c_master_0.avalon_slave_0: Signal chipselect appears 2 times (only once is allowed)
+Warning: nyan_mouse.dac_clock: dac_clock.areset_conduit must be exported, or connected to a matching conduit.
+Warning: nyan_mouse.dac_clock: dac_clock.locked_conduit must be exported, or connected to a matching conduit.
+Warning: nyan_mouse.dac_clock: dac_clock.phasedone_conduit must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/" --output-directory="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/" --file-set=QUARTUS_SYNTH --report-file="html:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.html" --report-file="sopcinfo:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.sopcinfo" --report-file="cmp:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.cmp" --report-file="qip:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/nyan_mouse.qip" --report-file=svd --report-file="regmap:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/nyan_mouse.regmap" --report-file="debuginfo:/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse/synthesis/nyan_mouse.debuginfo" --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE15E22C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file="/home/brandon/micromouse/IEEEUCR-MM-2014/Nyan Mouse/HW/FPGA/nyan_mouse.qsys" --language=VERILOG
+Progress: Loading FPGA/nyan_mouse.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding magic_GPIO [altera_avalon_pio 13.1]
+Progress: Parameterizing module magic_GPIO
+Progress: Adding processor_0 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module processor_0
+Progress: Adding nios_custom_instr_floating_point_2_0 [altera_nios_custom_instr_floating_point_2 100.99.98.97]
+Progress: Parameterizing module nios_custom_instr_floating_point_2_0
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 13.1]
+Progress: Parameterizing module performance_counter_0
+Progress: Adding systick [altera_avalon_timer 13.1]
+Progress: Parameterizing module systick
+Progress: Adding bt_debug [altera_avalon_uart 13.1]
+Progress: Parameterizing module bt_debug
+Progress: Adding memory_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module memory_0
+Progress: Adding adc_interface [altera_avalon_spi 13.1]
+Progress: Parameterizing module adc_interface
+Progress: Adding encoder_in [altera_avalon_pio 13.1]
+Progress: Parameterizing module encoder_in
+Progress: Adding motor_control [altera_avalon_pio 13.1]
+Progress: Parameterizing module motor_control
+Progress: Adding dac_clock [altpll 13.1]
+Progress: Parameterizing module dac_clock
+Progress: Adding dac_L [altera_avalon_pio 13.1]
+Progress: Parameterizing module dac_L
+Progress: Adding dac_R [altera_avalon_pio 13.1]
+Progress: Parameterizing module dac_R
+Progress: Adding i2c_master_0 [i2c_master 1.0]
+Progress: Parameterizing module i2c_master_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nyan_mouse.magic_GPIO: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nyan_mouse.encoder_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: nyan_mouse.i2c_master_0.avalon_slave_0: Signal chipselect appears 2 times (only once is allowed)
+Warning: nyan_mouse.dac_clock: dac_clock.areset_conduit must be exported, or connected to a matching conduit.
+Warning: nyan_mouse.dac_clock: dac_clock.locked_conduit must be exported, or connected to a matching conduit.
+Warning: nyan_mouse.dac_clock: dac_clock.phasedone_conduit must be exported, or connected to a matching conduit.
+Info: nyan_mouse: Generating nyan_mouse "nyan_mouse" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 15 modules, 65 connections
+Info: merlin_custom_instruction_transform: After transform: 20 modules, 70 connections
+Info: merlin_initial_interconnect_transform: After transform: 14 modules, 54 connections
+Warning: Translator i2c_master_0_avalon_slave_0_translator failed to match interface i2c_master_0.avalon_slave_0
+Info: merlin_translator_transform: After transform: 29 modules, 114 connections
+Info: merlin_domain_transform: After transform: 62 modules, 335 connections
+Info: merlin_router_transform: After transform: 79 modules, 403 connections
+Info: merlin_traffic_limiter_transform: After transform: 81 modules, 413 connections
+Info: merlin_burst_transform: After transform: 82 modules, 417 connections
+Info: merlin_network_to_switch_transform: After transform: 114 modules, 500 connections
+Info: merlin_width_transform: After transform: 116 modules, 508 connections
+Info: limiter_update_transform: After transform: 116 modules, 510 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 119 modules, 628 connections
+Info: merlin_hierarchy_transform: After transform: 21 modules, 75 connections
+Info: merlin_mm_transform: After transform: 21 modules, 75 connections
+Info: merlin_interrupt_mapper_transform: After transform: 22 modules, 79 connections
+Warning: i2c_master_0.interrupt_sender: Cannot connect reset for irq_synchronizer.receiver
+Info: merlin_interrupt_sync_transform: After transform: 23 modules, 84 connections
+Info: reset_adaptation_transform: After transform: 26 modules, 87 connections
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_translator:ci_slave:ci_slave_ipending (ipending)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_translator:ci_slave:ci_slave_estatus (estatus)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: nyan_mouse: "No matching role found for processor_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning: nyan_mouse: "No matching role found for bt_debug:s1:dataavailable (dataavailable)"
+Warning: nyan_mouse: "No matching role found for bt_debug:s1:readyfordata (readyfordata)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_burstcount (burstcount)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_lock (lock)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_read (read)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_readdatavalid (readdatavalid)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_debugaccess (debugaccess)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Warning: nyan_mouse: "No matching role found for mm_interconnect_0:i2c_master_0_avalon_slave_0:i2c_master_0_avalon_slave_0_byteenable (byteenable)"
+Error: nyan_mouse: More than one port in i2c_master_0:avalon_slave_0 has role chipselect
+Error: Generation stopped, 24 or more modules remaining
+Info: nyan_mouse: Done "nyan_mouse" with 22 modules, 1 files, 115114 bytes
+Error: ip-generate failed with exit code 1: 13 Errors, 18 Warnings
+Info: Finished: Create HDL design files for synthesis

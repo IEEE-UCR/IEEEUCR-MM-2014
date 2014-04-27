@@ -49,4 +49,6 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name QSYS_FILE nyan_mouse.qsys
+set_global_assignment -name SOURCE_FILE nyan_mouse.cmp
 set_global_assignment -name VERILOG_FILE Nyan_Mouse.v

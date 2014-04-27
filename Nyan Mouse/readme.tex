@@ -27,8 +27,18 @@ The software on this mouse will be my old software that ran on Overvolt.
 The software is actually quite craptastinc in that it does not support full encoder guidance or mapping.
 In fact, only one encoder was used because of circuit design errors encountered while not considering the therevin equivalence models of the quaterature encoders inside the Faulhaber motors.
 
-\section {Nyaning and Catting}
+\section {Nyaning and Catting (Methods)}
+Nyanning and catting is achieved with the use of CAD software and implementation of the \textit{Cyclone IV Handbook} along with various application notes such as those from Spansion (which creates the flash ROM).
+
+Autodesk Inventor 2013 is used to do the 3D design of the micromouse (and will hopefully do the printed circuit board stacks as well).
+
+Altera Quartus is used to instantiate the FPGA internals including the Nios II cores.
+
+Altera Nios II developer (based on eclipse) is used to program the Nios II processor and generate the programming files.
+
+KiCAD is used to generate the actual printed circuit boards (this makes a significant portion of available PDF documentation because of the ease in exporting KiCAD to schematic).
 
 \section {Is there any win to this game?}
 Nyan Cat as a game itself (if one can consider it a game), has no end but a definite beginning.  By default, the counter on the nyan cat webpage will keep incrementing (perhaps until it overflows at some very large number).  The purpose of this document was to explain what one would find in the micromouse folder and how it's supposed to work, but I forgot to do that and instead went on about the philosophy of micromouse.
+
 \end {document}
