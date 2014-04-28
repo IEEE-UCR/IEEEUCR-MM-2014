@@ -29,6 +29,9 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:enc_board
+LIBS:tc1185-5
+LIBS:ly3200alh
 LIBS:Nyan Mouse-cache
 EELAYER 24 0
 EELAYER END
