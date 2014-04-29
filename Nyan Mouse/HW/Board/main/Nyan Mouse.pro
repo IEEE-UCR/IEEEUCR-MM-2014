@@ -1,4 +1,4 @@
-update=Mon 28 Apr 2014 07:51:31 AM PDT
+update=Tue 29 Apr 2014 12:58:08 PM PDT
 version=1
 last_client=eeschema
 [general]
@@ -57,7 +57,7 @@ NetFmtName=
 RptD_X=0
 RptD_Y=100
 RptLab=1
-LabSize=100
+LabSize=61
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -92,3 +92,18 @@ LibName30=valves
 LibName31=/home/brandon/Dropbox/IEEEUCR-MM-2014/Nyan Mouse/HW/Board/libs/enc_board
 LibName32=/home/brandon/Dropbox/IEEEUCR-MM-2014/Nyan Mouse/HW/Board/libs/tc1185-5
 LibName33=/home/brandon/Dropbox/IEEEUCR-MM-2014/Nyan Mouse/HW/Board/libs/ly3200alh
+LibName34=3v3custom
+LibName35=adc128s052
+LibName36=altera_ep4ce15e22c
+LibName37=drv8837
+LibName38=enc_board
+LibName39=ip4221cz6-s
+LibName40=JST-XH-BattBalance
+LibName41=lp3987
+LibName42=ly3200alh
+LibName43=mic94345-4ycs
+LibName44=s25fl064p
+LibName45=SparkFun
+LibName46=stm32f103rx
+LibName47=tc1185-5
+LibName48=tps6205x
