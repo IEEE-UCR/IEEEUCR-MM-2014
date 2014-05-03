@@ -3,23 +3,21 @@ const uint32_t led = 13;
   // This is the pin that the LED on the board goes on
 const uint32_t bMillisDelay = 100;
   // This is the delay that starting would have in order not to damage the motors.
-const uint32_t stopDelay = 30;
+const uint32_t stopDelay = 40;
   // This is the delay that the micromouse takes when it's stopping to make sure that the motors are working correctly
-const uint32_t uDelay = 650;
+const uint32_t uDelay = 900;
   // This is the delay for taking u-turns.
-const uint32_t tDelay = 350;
-const uint32_t stopRead = 85;// how it tells whether the wall is right in front of it or not
-const uint32_t forwardSpeed = 100; // default forward speed
+const uint32_t tDelay = 400;
+const uint32_t stopRead = 450;// how it tells whether the wall is right in front of it or not
+const uint32_t forwardSpeed = 200; // default forward speed
 const uint32_t turnSpeed = 30; // default turning speed
 const uint32_t turnRead = 750; // how the front sensor says a turn is done
-const uint32_t turnThresholdL = 190; // how the side sensors say that something is a turn
-const uint32_t turnThresholdR = 190;
+const uint32_t turnThresholdL = 900; // how the side sensors say that something is a turn
+const uint32_t turnThresholdR = 900;
 const uint32_t activeBrakeTime = 170;
 const uint32_t activeBrakeSpeed = 15;
 const uint32_t activeTurnBrakeTime = 180;
 const uint32_t activeTurnBrakeSpeed = 10;
-volatile uint32_t lMotorEnc = 0;
-volatile uint32_t rMotorEnc = 0;
 const uint32_t sensorPinL = A0;
 const uint32_t sensorPinR = A2;
 
@@ -55,10 +53,6 @@ void setup() {
   delay(1000); // put a delay here so that the mouse won't go springing off immediately after turning on
 #if TELEMETRY
   Serial1.begin(9600);
-//  Serial1.println("AT");
-//  Serial1.println("AT+NAME=Overvolt");
-//  Serial1.println("AT+BAUD=115200,0,0");
-//  Serial1.begin(115200);
 #endif
 }
 mCtrl faulhaber(forwardSpeed, FORWARD, 7, 8, 9, 10, bMillisDelay, 5.00, 15);
@@ -158,9 +152,9 @@ void loop() {
       sensorR = analogRead(A2);
 #if TELEMETRY
       Serial1.print("Left ENC: ");
-      Serial1.println(lMotorEnc);
+      Serial1.println(enc.lMotorEnc);
       Serial1.print("Right Enc: ");
-      Serial1.println(rMotorEnc);      
+      Serial1.println(enc.rMotorEnc);      
       Serial1.print("Left Sensor: ");
       Serial1.println(sensorL);
       Serial1.print("Right Sensor: ");
