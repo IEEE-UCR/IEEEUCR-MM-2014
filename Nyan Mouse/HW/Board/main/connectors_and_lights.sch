@@ -32,6 +32,18 @@ LIBS:valves
 LIBS:enc_board
 LIBS:tc1185-5
 LIBS:ly3200alh
+LIBS:3v3custom
+LIBS:adc128s052
+LIBS:altera_ep4ce15e22c
+LIBS:drv8837
+LIBS:ip4221cz6-s
+LIBS:JST-XH-BattBalance
+LIBS:lp3987
+LIBS:mic94345-4ycs
+LIBS:s25fl064p
+LIBS:SparkFun
+LIBS:stm32f103rx
+LIBS:tps6205x
 LIBS:Nyan Mouse-cache
 EELAYER 24 0
 EELAYER END
