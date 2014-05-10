@@ -1,0 +1,6 @@
+Bluetooth header has traces going to the top
+
+Drill bit sizes
+Pin headers: 1.00mm
+LED/PTH leads: 0.70mm
+Via holes: 0.6mm
