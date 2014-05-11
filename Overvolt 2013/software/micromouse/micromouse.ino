@@ -1,3 +1,19 @@
+/* TODO
+ *
+ ** Implement new sensor scheme
+ * Sensors
+ *  \/
+ * Position control
+ *  \/
+ * Veocity control
+ *
+ ** Implement pulse sensor measurements
+ ** Implement gyro turn control
+ ** Actually use encoders
+ ** Use a command queue?
+ ** Implement D loop
+ */
+
 #define TELEMETRY 1
 const uint32_t led = 13;
   // This is the pin that the LED on the board goes on
@@ -5,15 +21,16 @@ const uint32_t bMillisDelay = 100;
   // This is the delay that starting would have in order not to damage the motors.
 const uint32_t stopDelay = 40;
   // This is the delay that the micromouse takes when it's stopping to make sure that the motors are working correctly
-const uint32_t uDelay = 900;
+const uint32_t uDelay = 625;
   // This is the delay for taking u-turns.
-const uint32_t tDelay = 400;
+const uint32_t lDelay = 325;
+const uint32_t rDelay = 350;
 const uint32_t stopRead = 450;// how it tells whether the wall is right in front of it or not
 const uint32_t forwardSpeed = 200; // default forward speed
 const uint32_t turnSpeed = 30; // default turning speed
 const uint32_t turnRead = 750; // how the front sensor says a turn is done
-const uint32_t turnThresholdL = 900; // how the side sensors say that something is a turn
-const uint32_t turnThresholdR = 900;
+const uint32_t turnThresholdL = 950; // how the side sensors say that something is a turn
+const uint32_t turnThresholdR = 950;
 const uint32_t activeBrakeTime = 170;
 const uint32_t activeBrakeSpeed = 15;
 const uint32_t activeTurnBrakeTime = 180;
@@ -55,7 +72,7 @@ void setup() {
   Serial1.begin(9600);
 #endif
 }
-mCtrl faulhaber(forwardSpeed, FORWARD, 7, 8, 9, 10, bMillisDelay, 5.00, 15);
+mCtrl faulhaber(forwardSpeed, FORWARD, 7, 8, 9, 10, bMillisDelay, 10.00, 15);
 // this syntax is a little confusing.  so I'll break it down.
 /*    default motor speed,
       default motor direction,
@@ -71,7 +88,7 @@ mCtrl faulhaber(forwardSpeed, FORWARD, 7, 8, 9, 10, bMillisDelay, 5.00, 15);
 */
 
 // These are calculated encoder counts for wall determination. 220 should be the time that it takes to stop the mouse using delays.
-encodr enc(265,200,50);
+encodr enc(270,200,50);
 
 const char _navRandomness[] = {0x9a, 0x81, 0x47, 0x6b, 0x81, 0xbe, 0xb0, 0xf0,
                                0xdc, 0x18, 0x4f, 0x44, 0x9f, 0x62, 0xe8, 0x5a,
@@ -92,6 +109,8 @@ boolean Nav_GetRandomBit() {
 }
 
 void loop() {
+  static boolean delayed = 0;
+  unsigned long time = millis();
   static eStates eState_t; // use enumerated states
   static int inputL = 0;
   static int inputR = 0;
@@ -115,6 +134,8 @@ void loop() {
       faulhaber.changeSpeed(forwardSpeed);
       faulhaber.speedUp(); // soft speedup to get things rolling
       do {
+        time = millis();
+        delayed = 0;
         sensorL = analogRead(sensorPinL);
         sensorR = analogRead(sensorPinR);
         faulhaber.straightLine(sensorL, sensorR); // use the control algorithm to have things work as they should
@@ -135,6 +156,12 @@ void loop() {
             enc.forceMark();
             Serial1.println("TURNING RIGHT");
           }
+        }
+        while (millis() - time < 10) {
+          delayed = 1;
+        }
+        if (!delayed) {
+          Serial1.println("Not delayed!");
         }
       } while ((analogRead(A1) > stopRead) && (!stahpLoop)); // When we get close enough to the wall, stop.
       faulhaber.changeSpeed(activeBrakeSpeed);
@@ -202,7 +229,7 @@ void loop() {
       faulhaber.turnAround(0);
       faulhaber.changeSpeed(turnSpeed);
       faulhaber.layInSpeed();
-      w8(tDelay);
+      w8(lDelay);
       faulhaber.turnAround(1);
       faulhaber.changeSpeed(activeTurnBrakeSpeed);
       faulhaber.layInSpeed();
@@ -216,7 +243,7 @@ void loop() {
       faulhaber.turnAround(1);
       faulhaber.changeSpeed(turnSpeed);
       faulhaber.layInSpeed();
-      w8(tDelay);
+      w8(rDelay);
       faulhaber.turnAround(0);
       faulhaber.changeSpeed(activeTurnBrakeSpeed);
       faulhaber.layInSpeed();

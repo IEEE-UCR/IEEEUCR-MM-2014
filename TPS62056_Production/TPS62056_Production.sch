@@ -1,0 +1,304 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:TPS62056_Reference-cache
+EELAYER 24 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "TPS6205x-based Fixed Voltage Switching Regulator Module"
+Date "23 jul 2013"
+Rev "A"
+Comp "UCR Micromouse"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TPS6205X U1
+U 1 1 536445D2
+P 3850 2100
+F 0 "U1" H 3400 2350 60  0000 C CNN
+F 1 "TPS6205X" H 3850 1800 60  0000 C CNN
+F 2 "" H 3050 2250 60  0000 C CNN
+F 3 "" H 3050 2250 60  0000 C CNN
+	1    3850 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 536445D3
+P 1750 2300
+F 0 "C1" H 1750 2400 40  0000 L CNN
+F 1 "22uF" H 1756 2215 40  0000 L CNN
+F 2 "~" H 1788 2150 30  0000 C CNN
+F 3 "~" H 1750 2300 60  0000 C CNN
+	1    1750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR L1
+U 1 1 536445D4
+P 5100 2100
+F 0 "L1" V 5050 2100 40  0000 C CNN
+F 1 "10uH" V 5200 2100 40  0000 C CNN
+F 2 "~" H 5100 2100 60  0000 C CNN
+F 3 "~" H 5100 2100 60  0000 C CNN
+	1    5100 2100
+	0    -1   -1   0   
+$EndComp
+Text Label 2850 2100 0    60   ~ 0
+VIN
+Text Label 8200 4700 1    60   ~ 0
+VIN
+Text Label 8300 4700 1    60   ~ 0
+GND
+$Comp
+L GND #PWR01
+U 1 1 536445D5
+P 8300 4450
+F 0 "#PWR01" H 8300 4450 30  0001 C CNN
+F 1 "GND" H 8300 4380 30  0001 C CNN
+F 2 "" H 8300 4450 60  0000 C CNN
+F 3 "" H 8300 4450 60  0000 C CNN
+	1    8300 4450
+	-1   0    0    1   
+$EndComp
+Text Label 8400 4700 1    60   ~ 0
+VOUT
+Text Label 4650 2500 0    60   ~ 0
+PG
+Text Label 4650 2700 0    60   ~ 0
+LBO
+$Comp
+L C C2
+U 1 1 536445D6
+P 5700 2300
+F 0 "C2" H 5700 2400 40  0000 L CNN
+F 1 "22uF" H 5706 2215 40  0000 L CNN
+F 2 "~" H 5738 2150 30  0000 C CNN
+F 3 "~" H 5700 2300 60  0000 C CNN
+	1    5700 2300
+	1    0    0    -1  
+$EndComp
+Text Label 4650 2300 0    60   ~ 0
+FB
+Text Label 4650 2100 0    60   ~ 0
+SW
+Text Label 2850 2500 0    60   ~ 0
+LBI
+Text Label 2850 2700 0    60   ~ 0
+SYNC
+$Comp
+L GND #PWR02
+U 1 1 536445D7
+P 3750 3350
+F 0 "#PWR02" H 3750 3350 30  0001 C CNN
+F 1 "GND" H 3750 3280 30  0001 C CNN
+F 2 "" H 3750 3350 60  0000 C CNN
+F 3 "" H 3750 3350 60  0000 C CNN
+	1    3750 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR03
+U 1 1 536445DB
+P 8200 4350
+F 0 "#PWR03" H 8200 4300 20  0001 C CNN
+F 1 "+BATT" H 8200 4450 30  0000 C CNN
+F 2 "" H 8200 4350 60  0000 C CNN
+F 3 "" H 8200 4350 60  0000 C CNN
+	1    8200 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 536445E0
+P 1750 2500
+F 0 "#PWR04" H 1750 2500 30  0001 C CNN
+F 1 "GND" H 1750 2430 30  0001 C CNN
+F 2 "" H 1750 2500 60  0000 C CNN
+F 3 "" H 1750 2500 60  0000 C CNN
+	1    1750 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 536445E1
+P 5700 2600
+F 0 "#PWR05" H 5700 2600 30  0001 C CNN
+F 1 "GND" H 5700 2530 30  0001 C CNN
+F 2 "" H 5700 2600 60  0000 C CNN
+F 3 "" H 5700 2600 60  0000 C CNN
+	1    5700 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR06
+U 1 1 536445E2
+P 1450 2000
+F 0 "#PWR06" H 1450 1950 20  0001 C CNN
+F 1 "+BATT" H 1450 2100 30  0000 C CNN
+F 2 "" H 1450 2000 60  0000 C CNN
+F 3 "" H 1450 2000 60  0000 C CNN
+	1    1450 2000
+	1    0    0    -1  
+$EndComp
+Text Notes 2200 2850 2    60   ~ 0
+Low-battery trip at 6.82v.\n(3.41v per cell in a 2s Li-Po)\n\nTo disable, do not populate\nR2 and short R3.
+$Comp
+L LED D1
+U 1 1 536445E6
+P 6000 2900
+F 0 "D1" H 6000 3000 50  0000 C CNN
+F 1 "LED" H 6000 2800 50  0000 C CNN
+F 2 "~" H 6000 2900 60  0000 C CNN
+F 3 "~" H 6000 2900 60  0000 C CNN
+	1    6000 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 536445E7
+P 6000 2400
+F 0 "R1" V 6080 2400 40  0000 C CNN
+F 1 "330" V 6007 2401 40  0000 C CNN
+F 2 "~" V 5930 2400 30  0000 C CNN
+F 3 "~" H 6000 2400 30  0000 C CNN
+	1    6000 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 536445E8
+P 6000 3150
+F 0 "#PWR07" H 6000 3150 30  0001 C CNN
+F 1 "GND" H 6000 3080 30  0001 C CNN
+F 2 "" H 6000 3150 60  0000 C CNN
+F 3 "" H 6000 3150 60  0000 C CNN
+	1    6000 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2100 4800 2100
+Wire Wire Line
+	2700 2300 3050 2300
+Wire Wire Line
+	8200 4350 8200 4750
+Wire Wire Line
+	8300 4750 8300 4450
+Wire Wire Line
+	4650 2500 4950 2500
+Wire Wire Line
+	4650 2700 4850 2700
+Wire Wire Line
+	4650 2300 5500 2300
+Wire Wire Line
+	2350 2700 3050 2700
+Connection ~ 3750 3200
+Wire Wire Line
+	3750 3200 3750 3350
+Connection ~ 1750 2100
+Wire Wire Line
+	5700 2500 5700 2600
+Wire Wire Line
+	1450 2000 1450 2100
+Connection ~ 5700 2100
+Wire Wire Line
+	1450 2100 3050 2100
+Connection ~ 2350 2100
+Wire Wire Line
+	2350 2100 2350 2700
+Wire Wire Line
+	5500 2300 5500 2100
+Connection ~ 5500 2100
+Wire Wire Line
+	6000 3150 6000 3100
+Wire Wire Line
+	6000 2700 6000 2650
+Wire Wire Line
+	6000 2150 6000 2100
+Connection ~ 6000 2100
+Wire Wire Line
+	8400 2100 8400 4750
+Text Label 2850 2300 0    60   ~ 0
+EN
+Wire Wire Line
+	2700 2300 2700 2100
+Connection ~ 2700 2100
+Wire Wire Line
+	3050 2500 2750 2500
+Wire Wire Line
+	2750 2500 2750 3200
+Wire Wire Line
+	2750 3200 3950 3200
+Wire Wire Line
+	8400 2100 5400 2100
+$Comp
+L CONN_3 K1
+U 1 1 536447B2
+P 8300 5100
+F 0 "K1" V 8250 5100 50  0000 C CNN
+F 1 "CONN_3" V 8350 5100 40  0000 C CNN
+F 2 "" H 8300 5100 60  0000 C CNN
+F 3 "" H 8300 5100 60  0000 C CNN
+	1    8300 5100
+	0    1    1    0   
+$EndComp
+NoConn ~ 4850 2700
+NoConn ~ 4950 2500
+$Comp
+L PWR_FLAG #FLG08
+U 1 1 536447D0
+P 3000 3200
+F 0 "#FLG08" H 3000 3295 30  0001 C CNN
+F 1 "PWR_FLAG" H 3000 3380 30  0000 C CNN
+F 2 "" H 3000 3200 60  0000 C CNN
+F 3 "" H 3000 3200 60  0000 C CNN
+	1    3000 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG09
+U 1 1 536447E4
+P 8200 4450
+F 0 "#FLG09" H 8200 4545 30  0001 C CNN
+F 1 "PWR_FLAG" H 8200 4630 30  0000 C CNN
+F 2 "" H 8200 4450 60  0000 C CNN
+F 3 "" H 8200 4450 60  0000 C CNN
+	1    8200 4450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3000 3200
+Connection ~ 8200 4450
+$EndSCHEMATC

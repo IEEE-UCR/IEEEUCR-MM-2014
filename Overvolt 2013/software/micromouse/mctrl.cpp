@@ -132,9 +132,9 @@ void mCtrl::straightLine(const uint32_t & lSensorRead, const uint32_t & rSensorR
   **/
 
 #if DEBUGMODE
-  Serial1.print("R: ");
+  Serial1.print("R ");
   Serial1.print(rSensorRead);
-  Serial1.print("L: ");
+  Serial1.print("L ");
   Serial1.print(lSensorRead);
 #endif
 
@@ -145,26 +145,26 @@ void mCtrl::straightLine(const uint32_t & lSensorRead, const uint32_t & rSensorR
   if (!lSensorInRange && !rSensorInRange) {
     iMouseError = 0;
 #if DEBUGMODE
-    Serial1.print(" IGRONING ALL SENSORS.");
+    Serial1.print(" N");
 #endif
   // In this condition, we assume that the left wall is missing.
   } else if (!lSensorInRange && rSensorInRange) {
     iMouseError = -2*(rSensorRead - this->rightSensorCalibrate );
 #if DEBUGMODE
-    Serial1.print(" Ignoring left sensor.");
+    Serial1.print(" R");
 #endif
   // In this condition, we assume that the right wall is missing.
   } else if (!rSensorInRange && lSensorInRange) {
     iMouseError = 2*(lSensorRead - this->leftSensorCalibrate );
 #if DEBUGMODE
-    Serial1.print(" Ignoring right sensor.");
+    Serial1.print(" L");
 #endif
   // If all is good, we use both sensors... LIKE A BOSS.
   } else {
     iMouseError = ((lSensorRead - this->leftSensorCalibrate) - (rSensorRead - this->rightSensorCalibrate)); 
     iMouseError /= (2);
 #if DEBUGMODE
-    Serial1.print(" Using all sensors.");
+    Serial1.print(" A");
 #endif
   }
 
